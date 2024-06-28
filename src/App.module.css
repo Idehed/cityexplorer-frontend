@@ -1,0 +1,14 @@
+.App {
+    font-family: "Poppins", sans-serif;
+    background-color: #f8f8f8;
+    min-height: 100vh;
+}
+
+.Red {
+    margin-left: 7px;
+    margin-bottom: 15px;
+}
+
+.Logo {
+    font-size: 25px;
+}
