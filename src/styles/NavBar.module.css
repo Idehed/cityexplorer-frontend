@@ -3,6 +3,14 @@
     border: 1px solid  #dadadf;
 }
 
+.NavLink {
+    padding: 5px;
+  }
+  
+  .Active i {
+    color: #039b24;
+  }
+
 .LogoM {
     margin-left: 7px;
     margin-bottom: 15px;
