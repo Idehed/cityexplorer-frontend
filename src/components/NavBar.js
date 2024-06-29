@@ -3,12 +3,78 @@ import { Navbar, Container, Nav} from "react-bootstrap";
 import logo from "../assets/family.png";
 import styles from '../styles/NavBar.module.css';
 import { NavLink } from "react-router-dom"
-import { useCurrentUser } from '../contexts/CurrentUserContext';
+import { useCurrentUser, useSetCurrentUser } from '../contexts/CurrentUserContext';
+import Avatar from './Avatar';
+import axios from "axios";
 
 const NavBar = () => {
   const currentUser = useCurrentUser();
+  const setCurrentUser = useSetCurrentUser();
 
-  const loggedInIcons = <>{currentUser?.username}</>
+  const handleSignOut = async () => {
+    try {
+      await axios.post("dj-rest-auth/logout/");
+      setCurrentUser(null);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const addPostIcon = (
+    <NavLink
+      className={styles.NavLink}
+      activeClassName={styles.Active}
+      to="/post/create"
+    >
+      <i className="fa-solid fa-circle-plus"></i>Create Post
+    </NavLink>
+  );
+
+  const loggedInIcons = (
+    <>
+      <NavLink
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+        to="/following"
+      >
+        <i classname="fa-solid fa-users"></i>Following
+      </NavLink>
+      <NavLink
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+        to="/guides"
+      >
+        <i className="fa-solid fa-person-hiking"></i>Guides
+      </NavLink>
+      <NavLink
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+        to="/liked"
+      >
+        <i className="fa-solid fa-heart"></i>Liked
+      </NavLink>
+      <NavLink
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+        to={`/profiles/${currentUser?.profile_id}`}
+      >
+        <Avatar src={currentUser?.profile_image} text="Profile" height={40} />
+      </NavLink>
+      <NavLink
+        to="/contact"
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+      >
+        <i className="fa-solid fa-envelopes-bulk"></i>Contact
+      </NavLink>
+      <NavLink 
+        className={styles.NavLink} 
+        to="/" 
+        onClick={handleSignOut}>
+        <i className="fas fa-sign-out-alt"></i>Sign out
+      </NavLink>
+    </>
+  );
   const loggedOutIcons = (
     <>
       <NavLink
@@ -25,6 +91,13 @@ const NavBar = () => {
       >
         <i className="fa-solid fa-user-plus"></i>Sign up
       </NavLink>{" "}
+      <NavLink
+        to="/contact"
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+      >
+        <i className="fa-solid fa-envelopes-bulk"></i>Contact
+      </NavLink>
     </>
   );
 
@@ -37,6 +110,7 @@ const NavBar = () => {
             <img src={logo} alt="logo" height="45" className={styles.LogoM} />
         </Navbar.Brand>
         </NavLink>
+        {currentUser && addPostIcon}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto text-left">
@@ -47,13 +121,6 @@ const NavBar = () => {
               to="/"
             >
               <i className="fa-solid fa-earth-europe"></i>Explore
-            </NavLink>
-            <NavLink
-              to="/contact"
-              className={styles.NavLink}
-              activeClassName={styles.Active}
-            >
-              <i className="fa-solid fa-envelopes-bulk"></i>Contact
             </NavLink>
             {currentUser ? loggedInIcons : loggedOutIcons}
           </Nav>
