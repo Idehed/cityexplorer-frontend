@@ -22,28 +22,28 @@ const NavBar = () => {
               activeClassName={styles.Active}
               to="/"
             >
-              <i class="fa-solid fa-earth-europe"></i>Explore
+              <i className="fa-solid fa-earth-europe"></i>Explore
             </NavLink>
             <NavLink
               className={styles.NavLink}
               activeClassName={styles.Active}
               to="/signin"
             >
-              <i class="fa-solid fa-arrow-right-to-bracket"></i>Sign in
+              <i className="fa-solid fa-arrow-right-to-bracket"></i>Sign in
             </NavLink>
             <NavLink
               to="/signup"
               className={styles.NavLink}
               activeClassName={styles.Active}
             >
-              <i class="fa-solid fa-user-plus"></i>Sign up
+              <i className="fa-solid fa-user-plus"></i>Sign up
             </NavLink>
             <NavLink
               to="/contact"
               className={styles.NavLink}
               activeClassName={styles.Active}
             >
-              <i class="fa-solid fa-envelopes-bulk"></i>Contact
+              <i className="fa-solid fa-envelopes-bulk"></i>Contact
             </NavLink>
           </Nav>
         </Navbar.Collapse>
