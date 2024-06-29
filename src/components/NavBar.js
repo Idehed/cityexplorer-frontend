@@ -1,9 +1,10 @@
-import React from 'react'
-import { Navbar, Container, Nav} from "react-bootstrap";
+import React from 'react';
+import { Navbar, Container, Nav } from "react-bootstrap";
 import logo from "../assets/family.png";
 import styles from '../styles/NavBar.module.css';
-import { NavLink } from "react-router-dom"
-import { useCurrentUser, useSetCurrentUser } from '../contexts/CurrentUserContext';
+import { NavLink } from "react-router-dom";
+import { useCurrentUser, useSetCurrentUser }
+from '../contexts/CurrentUserContext';
 import Avatar from './Avatar';
 import axios from "axios";
 
@@ -24,7 +25,7 @@ const NavBar = () => {
     <NavLink
       className={styles.NavLink}
       activeClassName={styles.Active}
-      to="/post/create"
+      to="/posts/create"
     >
       <i className="fa-solid fa-circle-plus"></i>Create Post
     </NavLink>
@@ -128,6 +129,6 @@ const NavBar = () => {
       </Container>
     </Navbar>
   );
-}
+};
 
-export default NavBar
+export default NavBar;
