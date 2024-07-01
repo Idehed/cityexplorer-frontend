@@ -30,7 +30,7 @@ const NavBar = () => {
       activeClassName={styles.Active}
       to="/posts/create"
     >
-      <i className="fa-solid fa-circle-plus"></i>Create Post
+      <i className="fa-solid fa-circle-plus"></i>Add Post
     </NavLink>
   );
 
@@ -58,13 +58,6 @@ const NavBar = () => {
         <i className="fa-solid fa-heart"></i>Liked
       </NavLink>
       <NavLink
-        className={styles.NavLink}
-        activeClassName={styles.Active}
-        to={`/profiles/${currentUser?.profile_id}`}
-      >
-        <Avatar src={currentUser?.profile_image} text="Profile" height={40} />
-      </NavLink>
-      <NavLink
         to="/contact"
         className={styles.NavLink}
         activeClassName={styles.Active}
@@ -77,16 +70,23 @@ const NavBar = () => {
         onClick={handleSignOut}>
         <i className="fas fa-sign-out-alt"></i>Sign out
       </NavLink>
+      <NavLink
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+        to={`/profiles/${currentUser?.profile_id}`}
+      >
+        <Avatar src={currentUser?.profile_image} text="Profile" height={40} />
+      </NavLink>
     </>
   );
   const loggedOutIcons = (
     <>
       <NavLink
+        to="/contact"
         className={styles.NavLink}
         activeClassName={styles.Active}
-        to="/signin"
       >
-        <i className="fa-solid fa-arrow-right-to-bracket"></i>Sign in
+        <i className="fa-solid fa-envelopes-bulk"></i>Contact
       </NavLink>
       <NavLink
         to="/signup"
@@ -96,11 +96,11 @@ const NavBar = () => {
         <i className="fa-solid fa-user-plus"></i>Sign up
       </NavLink>
       <NavLink
-        to="/contact"
         className={styles.NavLink}
         activeClassName={styles.Active}
+        to="/signin"
       >
-        <i className="fa-solid fa-envelopes-bulk"></i>Contact
+        <i className="fa-solid fa-arrow-right-to-bracket"></i>Sign in
       </NavLink>
     </>
   );
