@@ -52,6 +52,12 @@ i {
   padding: 7px;
   vertical-align: middle;
 }
+
+input[type="file"] {
+
+  display: none;
+
+}
   
 i:hover {
   cursor: pointer;
