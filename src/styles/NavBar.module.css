@@ -5,10 +5,11 @@
 
 .NavLink {
     padding: 5px;
+    color: #232424;
   }
   
   .Active i {
-    color: #039b24;
+    color:rgb(5, 70, 190);
   }
 
 .LogoM {
