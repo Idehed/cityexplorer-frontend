@@ -110,7 +110,7 @@ const NavBar = () => {
     <Navbar expanded={expanded} className={styles.NavBar} expand="md" fixed="top">
       <Container>
         <NavLink to="/">
-        <Navbar.Brand className={styles.LogoT}>CityExplorer 
+        <Navbar.Brand className={styles.LogoT}>
             <img src={logo} alt="logo" height="45" className={styles.LogoM} />
         </Navbar.Brand>
         </NavLink>
