@@ -62,7 +62,7 @@ function ProfilePage() {
 
   const mainProfile = (
     <>
-    {profile?.is_owner && <ProfileEditDropdown id={profile?.id} />}
+      {profile?.is_owner && <ProfileEditDropdown id={profile?.id} />}
       <Row noGutters className="px-3 text-center">
         <Col lg={3} className="text-lg-left">
           <Image
@@ -87,6 +87,46 @@ function ProfilePage() {
               <div>following</div>
             </Col>
           </Row>
+
+            <div>
+              {profile?.facebook_link && (
+                <a
+                  href={profile?.facebook_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-facebook"></i>
+                </a>
+              )}
+              {profile?.instagram_link && (
+                <a
+                  href={profile?.instagram_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fa-brands fa-instagram"></i>
+                </a>
+              )}
+              {profile?.x_link && (
+                <a
+                  href={profile?.x_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fa-brands fa-x-twitter"></i>
+                </a>
+              )}
+              {profile?.youtube_link && (
+                <a
+                  href={profile?.youtube_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fa-brands fa-square-youtube"></i>
+                </a>
+              )}
+            </div>
+            
         </Col>
         <Col lg={3} className="text-lg-right">
           {currentUser &&

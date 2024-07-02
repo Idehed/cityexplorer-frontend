@@ -29,20 +29,51 @@ const ProfileEditForm = () => {
     name: "",
     content: "",
     image: "",
+    facebook_link: "",
+    instagram_link: "",
+    x_link: "",
+    youtube_link:""
   });
-  const { name, content, image } = profileData;
+  const {
+    name,
+    content,
+    image,
+    facebook_link,
+    instagram_link,
+    x_link,
+    youtube_link,
+  } = profileData;
 
   const [errors, setErrors] = useState({});
 
   useEffect(() => {
+    let isMounted = true;
+
     const handleMount = async () => {
       if (currentUser?.profile_id?.toString() === id) {
         try {
           const { data } = await axiosReq.get(`/profiles/${id}/`);
-          const { name, content, image } = data;
-          setProfileData({ name, content, image });
+          const {
+            name,
+            content,
+            image,
+            facebook_link,
+            instagram_link,
+            x_link,
+            youtube_link,
+          } = data;
+          if (isMounted) {
+            setProfileData({
+              name,
+              content,
+              image,
+              facebook_link,
+              instagram_link,
+              x_link,
+              youtube_link,
+            });
+          }
         } catch (err) {
-          console.log(err);
           history.push("/");
         }
       } else {
@@ -65,6 +96,10 @@ const ProfileEditForm = () => {
     const formData = new FormData();
     formData.append("name", name);
     formData.append("content", content);
+    formData.append("facebook_link", facebook_link);
+    formData.append("instagram_link", instagram_link);
+    formData.append("x_link", x_link);
+    formData.append("youtube_link", youtube_link);
 
     if (imageFile?.current?.files[0]) {
       formData.append("image", imageFile?.current?.files[0]);
@@ -95,6 +130,34 @@ const ProfileEditForm = () => {
           rows={7}
         />
       </Form.Group>
+
+      <Form.Group>
+            <Form.Label>Facebook Link</Form.Label>
+            <Form.Control type="text" placeholder="Enter Facebook link" name="facebook_link"
+                value={facebook_link}
+                onChange={handleChange}/>
+        </Form.Group>
+
+        <Form.Group>
+            <Form.Label>Instagram Link</Form.Label>
+            <Form.Control type="text" placeholder="Enter Instagram link" name="instagram_link"
+                value={instagram_link}
+                onChange={handleChange}/>
+        </Form.Group>
+
+        <Form.Group>
+            <Form.Label>X Link</Form.Label>
+            <Form.Control type="text" placeholder="Enter X link" name="x_link"
+                value={x_link}
+                onChange={handleChange}/>
+        </Form.Group>
+
+        <Form.Group>
+            <Form.Label>Youtube Link</Form.Label>
+            <Form.Control type="text" placeholder="Enter Youtube link" name="youtube_link"
+                value={youtube_link}
+                onChange={handleChange}/>
+        </Form.Group>
 
       {errors?.content?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
