@@ -49,7 +49,35 @@ function PostsPage({ message, filter = "" }) {
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
+      {pathname === "/" && (
+        <>
+        <h2 className="text-center">
+          Explore
+        </h2>
+        <hr/>
+        </>
+      )}
+      {pathname === "/following" && (
+        <>
+        <h2 className="text-center">
+          Your followed user posts
+        </h2>
+        <hr/>
+        </>
+      )}
+      {pathname === "/liked" && (
+        <>
+        <h2 className="text-center">
+          Your liked posts
+        </h2>
+        <hr/>
+        </>
+      )}
         <PopularProfiles mobile />
+
+        {pathname !== "/" && pathname !== "/following" && pathname !== "/liked" &&(
+
+          <>
         <i
           className={`fa-solid fa-magnifying-glass-arrow-right ${styles.SearchIcon}`}
         />
@@ -65,6 +93,8 @@ function PostsPage({ message, filter = "" }) {
             placeholder="Search posts"
           />
         </Form>
+        </>
+        )}
 
         {hasLoaded ? (
           <>

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import PopularProfiles from "../profiles/PopularProfiles";
 import { Container, Form } from "react-bootstrap";
 import appStyles from "../../App.module.css"
 import { useLocation } from "react-router";
@@ -47,8 +46,8 @@ const GuidePage = ({ message, filter = "" }) => {
       return (
         <Row className="h-100 d-flex justify-content-center">
           <Col className="py-2 p-0 p-lg-2" lg={8}>
-            <p className="text-center">More profiles</p>
-            <PopularProfiles />
+          <h1 className="text-center">Guides</h1>
+          <hr/>
             <i className={`fas fa-search ${styles.SearchIcon}`} />
             <Form
               className={styles.SearchBar}
@@ -65,7 +64,6 @@ const GuidePage = ({ message, filter = "" }) => {
     
             {hasLoaded ? (
               <>
-                <h1>Guides</h1>
                 {guides.results.length ? (
                   <InfiniteScroll
                     children={guides.results.map((guide) => (
