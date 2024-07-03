@@ -29,7 +29,7 @@ const GuidePage = ({ message, filter = "" }) => {
             setGuides(data);
             setHasLoaded(true);
           } catch (err) {
-            console.log(err);
+            // console.log(err);
           }
         };
     
