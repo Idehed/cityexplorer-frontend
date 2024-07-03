@@ -9,11 +9,11 @@ import Asset from "../../components/Asset";
 import styles from "../../styles/ProfilePage.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
-
+import axios from "axios";
 import PopularProfiles from "./PopularProfiles";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { useParams } from "react-router";
-import { axiosReq } from "../../api/axiosDefaults";
+import { axiosReq, axiosRes } from "../../api/axiosDefaults";
 import {
   useProfileData,
   useSetProfileData,
@@ -25,22 +25,39 @@ import Post from "../posts/Post";
 import { fetchMoreData } from "../../utils/utils";
 import NoResults from "../../assets/no-results.png";
 import { ProfileEditDropdown } from "../../components/MoreDropdown";
+import Modal from "react-bootstrap/Modal";
+import Guide from "../guides/Guide";
 
-function ProfilePage() {
+const ProfilePage = () => {
   const [hasLoaded, setHasLoaded] = useState(false);
   const [profilePosts, setProfilePosts] = useState({ results: [] });
+  const [guideData, setGuideData] = useState(null);
 
   const currentUser = useCurrentUser();
   const { id } = useParams();
 
-  const {setProfileData, handleFollow, handleUnfollow} = useSetProfileData();
+  const { setProfileData, handleFollow, handleUnfollow } = useSetProfileData();
   const { pageProfile } = useProfileData();
 
   const [profile] = pageProfile.results;
   const is_owner = currentUser?.username === profile?.owner;
+  const guideId = profile?.guideId;
+
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  const handleDeleteGuide = async () => {
+    try {
+      await axios.delete(`/guides/${guideId}/`);
+      await axiosRes.put(`/profiles/${id}/`, { guideId: null });
+      setGuideData(null);
+    } catch (err) {}
+    handleClose();
+  };
 
   useEffect(() => {
-    const fetchData = async () => {
+    const handleMount = async () => {
       try {
         const [{ data: pageProfile }, { data: profilePosts }] =
           await Promise.all([
@@ -52,17 +69,27 @@ function ProfilePage() {
           pageProfile: { results: [pageProfile] },
         }));
         setProfilePosts(profilePosts);
+        try {
+          const { data } = await axiosReq.get(`/guides/${guideId}/`);
+          setGuideData(data);
+        } catch (err) {
+          setGuideData(null);
+        }
         setHasLoaded(true);
       } catch (err) {
-        // console.log(err);
+          setGuideData(null);
       }
     };
-    fetchData();
-  }, [id, setProfileData]);
+    handleMount();
+  }, [id, setProfileData, guideId]);
 
   const mainProfile = (
     <>
-      {profile?.is_owner && <ProfileEditDropdown id={profile?.id} />}
+      {profile?.is_owner && (
+        <ProfileEditDropdown id={profile?.id}
+        handleDeleteGuide={handleDeleteGuide} 
+        />
+      )}
       <Row noGutters className="px-3 text-center">
         <Col lg={3} className="text-lg-left">
           <Image
@@ -73,6 +100,7 @@ function ProfilePage() {
         </Col>
         <Col lg={6}>
           <h3 className="m-2">{profile?.owner}</h3>
+          {profile?.guideId && <p>I am a guide!</p>}
           <Row className="justify-content-center no-gutters">
             <Col xs={3} className="my-2">
               <div>{profile?.posts_count}</div>
@@ -184,6 +212,34 @@ function ProfilePage() {
           {hasLoaded ? (
             <>
               {mainProfile}
+              {profile?.guideId && is_owner && (
+                <Button className={`${btnStyles.Button} mb-2`} onClick={handleShow}>
+                  Remove as guide
+                </Button>
+              )}
+              <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                  <Modal.Title>Confirm Delete</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                  Are you sure you want to delete your guides profile?
+                </Modal.Body>
+                <Modal.Footer>
+                  <Button variant="secondary" onClick={handleClose}>
+                    Cancel
+                  </Button>
+                  <Button
+                    className={btnStyles.Button}
+                    onClick={handleDeleteGuide}
+                  >
+                    Confirm
+                  </Button>
+                </Modal.Footer>
+              </Modal>
+              {guideData && (
+                <Guide {...guideData} isProfilePage showAll />
+              )}
+
               {mainProfilePosts}
             </>
           ) : (
@@ -196,6 +252,6 @@ function ProfilePage() {
       </Col>
     </Row>
   );
-}
+};
 
 export default ProfilePage;

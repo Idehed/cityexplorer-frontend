@@ -12,7 +12,7 @@ import { axiosReq, axiosRes } from "../../api/axiosDefaults";
 import { useRedirect } from "../../hooks/useRedirect";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
-function GuideCreateForm() {
+const GuideCreateForm = () => {
   useRedirect('loggedOut');
   const [errors, setErrors] = useState({});
   const currentUser = useCurrentUser();

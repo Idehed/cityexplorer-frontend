@@ -70,6 +70,14 @@ export function ProfileEditDropdown({ id }) {
           <i className="fas fa-key" />
           change password
         </Dropdown.Item>
+        <Dropdown.Item
+          // sends user to the create artist form
+          onClick={() => history.push("/guides/create")}
+          aria-label="add-guides"
+        >
+          <i className="fas fa-plus-square" />
+          register as a guide
+        </Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
   );

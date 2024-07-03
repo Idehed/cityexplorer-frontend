@@ -50,7 +50,7 @@ const NavBar = () => {
       <NavLink
         className={styles.NavLink}
         activeClassName={styles.Active}
-        to="/guides/id"
+        to="/guides"
       >
         <i className="fa-solid fa-person-hiking"></i>Guides
       </NavLink>

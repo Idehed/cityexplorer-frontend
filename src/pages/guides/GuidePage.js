@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import { Container, Form } from "react-bootstrap";
+import Form from "react-bootstrap/Form";
+import Container from "react-bootstrap/Container";
 import appStyles from "../../App.module.css"
-import { useLocation } from "react-router";
+
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { fetchMoreData } from "../../utils/utils";
 import Asset from "../../components/Asset";
@@ -13,6 +14,7 @@ import { axiosReq } from "../../api/axiosDefaults";
 import InfiniteScroll from "react-infinite-scroll-component";
 import NoResults from "../../assets/no-results.png";
 import Guide from "./Guide";
+import { useLocation } from "react-router-dom/cjs/react-router-dom";
 
 const GuidePage = ({ message, filter = "" }) => {
     const [guides, setGuides] = useState({ results: [] });
