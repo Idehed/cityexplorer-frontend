@@ -13,6 +13,7 @@
   padding: 10px;
   border-radius: 15px;
   border: 1px solid #dadadf;
+  margin-top: 10px;
 }
 
 .FillerImage {
@@ -88,4 +89,28 @@ hr {
 }
 *::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+@media screen and (max-width: 991px) {
+  .Content1 {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid #dadadf;
+    display: none;
+  }
+
+}
+
+@media screen and (min-width: 991px) {
+  .Content {
+    margin-top: 5px;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .Content {
+    margin-top: 15px;
+  }
 }
