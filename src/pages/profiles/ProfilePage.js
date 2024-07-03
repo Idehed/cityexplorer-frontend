@@ -204,42 +204,42 @@ const ProfilePage = () => {
     </>
   );
 
+  const mainGuide = (
+    <>
+      {profile?.guideId && is_owner && (
+        <Button className={`${btnStyles.Button} mb-2`} onClick={handleShow}>
+          Remove as guide
+        </Button>
+      )}
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Confirm Delete</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          Are you sure you want to delete your guides profile?
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Cancel
+          </Button>
+          <Button className={btnStyles.Button} onClick={handleDeleteGuide}>
+            Confirm
+          </Button>
+        </Modal.Footer>
+      </Modal>
+      {guideData && <Guide {...guideData} isProfilePage showAll />}
+    </>
+  );
+
   return (
-    <Row>
+    <Row className="d-flex justify-content-center">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <PopularProfiles mobile />
         <Container className={appStyles.Content}>
           {hasLoaded ? (
             <>
               {mainProfile}
-              {profile?.guideId && is_owner && (
-                <Button className={`${btnStyles.Button} mb-2`} onClick={handleShow}>
-                  Remove as guide
-                </Button>
-              )}
-              <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                  <Modal.Title>Confirm Delete</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                  Are you sure you want to delete your guides profile?
-                </Modal.Body>
-                <Modal.Footer>
-                  <Button variant="secondary" onClick={handleClose}>
-                    Cancel
-                  </Button>
-                  <Button
-                    className={btnStyles.Button}
-                    onClick={handleDeleteGuide}
-                  >
-                    Confirm
-                  </Button>
-                </Modal.Footer>
-              </Modal>
-              {guideData && (
-                <Guide {...guideData} isProfilePage showAll />
-              )}
-
+              {mainGuide}
               {mainProfilePosts}
             </>
           ) : (
