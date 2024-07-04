@@ -117,7 +117,7 @@ function PostEditForm() {
       ))}
 
       <Button
-        className={`${btnStyles.Button} ${btnStyles.Blue}`}
+        className={`${btnStyles.Button} ${btnStyles.Red}`}
         onClick={() => history.goBack()}
       >
         cancel

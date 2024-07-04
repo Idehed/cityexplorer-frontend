@@ -27,6 +27,7 @@ import NoResults from "../../assets/no-results.png";
 import { ProfileEditDropdown } from "../../components/MoreDropdown";
 import Modal from "react-bootstrap/Modal";
 import Guide from "../guides/Guide";
+import logo from "../../assets/low.png";
 
 const ProfilePage = () => {
   const [hasLoaded, setHasLoaded] = useState(false);
@@ -122,7 +123,6 @@ const ProfilePage = () => {
         </Col>
         <Col lg={6}>
           <h3 className="m-2">{profile?.owner}</h3>
-          
           <Row className="justify-content-center no-gutters">
             <Col xs={3} className="my-2">
               <div>{profile?.posts_count}</div>
@@ -176,6 +176,7 @@ const ProfilePage = () => {
                 </a>
               )}
             </div>
+            <hr />
             
         </Col>
         <Col lg={3} className="text-lg-right">
@@ -205,8 +206,7 @@ const ProfilePage = () => {
   const mainProfilePosts = (
     <>
       <hr />
-      <p className="text-center">{profile?.owner}'s posts</p>
-      <hr />
+      <p className="text-center">My posts <img src={logo} alt="logo" height="30" /></p>
       {profilePosts.results.length ? (
         <InfiniteScroll
           children={profilePosts.results.map((post) => (
@@ -256,7 +256,6 @@ const ProfilePage = () => {
   return (
     <Row className="d-flex justify-content-center">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
-        <PopularProfiles mobile />
         <Container className={appStyles.Content}>
           {hasLoaded ? (
             <>

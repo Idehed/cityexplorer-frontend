@@ -11,18 +11,17 @@ const PopularProfiles = ({ mobile }) => {
 
   return (
     <Container className={`${appStyles.Content} ${
-        mobile && "d-none  mb-3"
+        mobile && "d-lg-none text-center mb-3"
       }`}>
       {popularProfiles.results.length ? (
         <>
-          <p className="text-center">More profiles <img src={logo} alt="logo" height="45"/></p>
+          <p className="text-center">More profiles <img src={logo} alt="logo" height="30"/></p>
           <hr/>
           {mobile ? (
             <div className="d-flex justify-content-around">
               {popularProfiles.results.slice(0, 4).map((profile) => (
             <Profile key={profile.id}  profile={profile} mobile />
           ))}
-
             </div>
           ) : (
             popularProfiles.results.map((profile) => (

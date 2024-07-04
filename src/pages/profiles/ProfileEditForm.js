@@ -121,8 +121,9 @@ const ProfileEditForm = () => {
   const textFields = (
     <>
       <Form.Group>
-        <Form.Label>Bio</Form.Label>
+        <Form.Label>About you</Form.Label>
         <Form.Control
+          className="justify-content-between"
           as="textarea"
           value={content}
           onChange={handleChange}
@@ -165,7 +166,7 @@ const ProfileEditForm = () => {
         </Alert>
       ))}
       <Button
-        className={`${btnStyles.Button} ${btnStyles.Blue}`}
+        className={`${btnStyles.Button} ${btnStyles.Red}`}
         onClick={() => history.goBack()}
       >
         cancel

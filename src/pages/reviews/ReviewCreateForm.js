@@ -61,6 +61,7 @@ const ReviewCreateForm = () => {
   const textFields = (
     <div className="text-center">
       <Form.Group>
+      <Form.Label>Rate here:</Form.Label>
       <Rating 
        onClick={handleRating}
        transition
@@ -69,7 +70,7 @@ const ReviewCreateForm = () => {
       </Form.Group>
 
       <Form.Group>
-        <Form.Label>Content</Form.Label>
+        <Form.Label>Write your review here!</Form.Label>
         <hr className={styles.hrguide}/>
         <Form.Control
           as="textarea"
@@ -86,7 +87,7 @@ const ReviewCreateForm = () => {
       ))}
 
       <Button
-        className={`${btnStyles.Button} ${btnStyles.Blue}`}
+        className={`${btnStyles.Button} ${btnStyles.Red}`}
         onClick={() => history.goBack()}
       >
         cancel
@@ -98,9 +99,7 @@ const ReviewCreateForm = () => {
   );
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <div className="text-center">Write your review here!</div>
-      <hr className={styles.hrguide}/>
+    <Form className="mt-4" onSubmit={handleSubmit}>
         <Container className={styles.Contentcreateguide}>{textFields}</Container>
     </Form>
   );
