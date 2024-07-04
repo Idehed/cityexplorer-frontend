@@ -73,7 +73,7 @@ const ReviewPage = ({ message }) => {
                   />
                 ) : (
                   <Container className={appStyles.Content}>
-                    <Asset src={NoResults} message={message} />
+                    <Asset src={NoResults} message= "No reviews yet..." />
                   </Container>
                 )}
               </>

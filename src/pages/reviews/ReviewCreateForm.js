@@ -15,7 +15,7 @@ import { useRedirect } from "../../hooks/useRedirect";
 const ReviewCreateForm = () => {
   useRedirect('loggedOut');
   const [errors, setErrors] = useState({});
-  const { id } = useParams
+  const { id } = useParams();
 
   const [reviewData, setReviewData] = useState({
     guideId: id,
@@ -29,7 +29,7 @@ const ReviewCreateForm = () => {
 
   // Catch Rating value
   const handleRating = (rate) => {
-    setRating(rate/ 20);
+    setRating(rate / 20);
   };
 
   const handleChange = (event) => {
@@ -72,7 +72,7 @@ const ReviewCreateForm = () => {
         <Form.Label>Content</Form.Label>
         <hr className={styles.hrguide}/>
         <Form.Control
-          type="textarea"
+          as="textarea"
           rows={6}
           name="content"
           value={content}

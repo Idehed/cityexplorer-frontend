@@ -27,11 +27,11 @@ const Review = (props) => {
           <span className={styles.Owner}>{owner}</span>
           <span className={styles.Date}>{updated_at}</span>
           <p>
-            Rating:
+            Rating:{' '}
             <Rating readonly initialValue={rating} size={25}/* Available Props */ />
           </p>
           <p>
-            Review:
+            Review:{' '}
             {content}
           </p>
         </Media.Body>
