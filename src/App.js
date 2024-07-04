@@ -49,7 +49,7 @@ function App() {
           <Route exact path="/profiles/:id/edit" render={() => <ProfileEditForm />} />
           <Route exact path="/guides" render={() => <GuidePage />} />
           <Route exact path="/guides/create/" render={() => <GuideCreateForm />} />
-          <Route exact path="/reviews/id:create/" render={() => <ReviewCreateForm />} />
+          <Route exact path="/reviews/:id/create/" render={() => <ReviewCreateForm />} />
 
           <Route render={() => <NotFound />} />
         </Switch>

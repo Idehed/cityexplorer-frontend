@@ -4,6 +4,7 @@ import Media from "react-bootstrap/Media";
 
 import { Link, useHistory } from "react-router-dom";
 import { Button } from "react-bootstrap";
+import { Rating } from "react-simple-star-rating";
 import Avatar from "../../components/Avatar";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import btnStyles from "../../styles/Button.module.css";
@@ -21,6 +22,8 @@ const Guide = (props) => {
     cost,
     email,
     phone,
+    reviews_count,
+    average_rating,
     isProfilePage,
     showAll,
   } = props;
@@ -60,6 +63,16 @@ const Guide = (props) => {
           Phone:
           {phone}
         </p>
+        <p className="text-center">
+          Rating:
+          {" "}
+          <Rating readonly initialValue={average_rating} size={25} />
+        </p>
+        <p>
+          {reviews_count}
+          {" "}
+          reviews
+        </p>
         {!is_owner && (
           <Button
             className={btnStyles.Button}
@@ -75,7 +88,7 @@ const Guide = (props) => {
             onClick={() => history.push(`/reviews/${id}`)}
             aria-label="view-reviews"
           >
-            Artist Reviews
+            Guide Reviews
           </Button>
         )}
       </Card.Body>

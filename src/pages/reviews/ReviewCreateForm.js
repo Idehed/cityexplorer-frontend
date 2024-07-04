@@ -7,31 +7,34 @@ import Alert from "react-bootstrap/Alert";
 
 import styles from "../../styles/GuideCreateEditForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
-import { useHistory } from "react-router";
-import { axiosReq, axiosRes } from "../../api/axiosDefaults";
+import { useHistory, useParams } from "react-router";
+import { Rating } from "react-simple-star-rating";
+import { axiosReq } from "../../api/axiosDefaults";
 import { useRedirect } from "../../hooks/useRedirect";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 const ReviewCreateForm = () => {
   useRedirect('loggedOut');
   const [errors, setErrors] = useState({});
-  const currentUser = useCurrentUser();
-  const id = currentUser?.profile_id;
+  const { id } = useParams
 
-  const [guideData, setGuideData] = useState({
-    city: "",
-    duration: "",
-    cost: "",
-    email: "",
-    phone: "",
+  const [reviewData, setReviewData] = useState({
+    guideId: id,
+    content: "",
   });
-  const { city, duration, cost, email, phone } = guideData;
+  const { guideId, content } = reviewData;
 
   const history = useHistory();
 
+  const [rating, setRating] = useState(0); 
+
+  // Catch Rating value
+  const handleRating = (rate) => {
+    setRating(rate/ 20);
+  };
+
   const handleChange = (event) => {
-    setGuideData({
-      ...guideData,
+    setReviewData({
+      ...reviewData,
       [event.target.name]: event.target.value,
     });
   };
@@ -40,17 +43,12 @@ const ReviewCreateForm = () => {
     event.preventDefault();
     const formData = new FormData();
 
-    formData.append('city', city);
-    formData.append('duration', duration);
-    formData.append('cost', cost);
-    formData.append('email', email);
-    formData.append('phone', phone);
+    formData.append('guide', guideId);
+    formData.append('rating', rating);
+    formData.append('content', content);
 
     try {
-        const { data } = await axiosReq.post("/guides/", formData);
-
-        await axiosRes.put(`/profiles/${id}/`, { guideId: data.id });
-
+        await axiosReq.post("/reviews/", formData);
         history.goBack();
       } catch (err) {
         // console.log(err);
@@ -63,80 +61,25 @@ const ReviewCreateForm = () => {
   const textFields = (
     <div className="text-center">
       <Form.Group>
-        <Form.Label>City</Form.Label>
-        <hr className={styles.hrguide}/>
-        <Form.Control
-          type="text"
-          name="city"
-          value={city}
-          onChange={handleChange}
+      <Rating 
+       onClick={handleRating}
+       transition
+       fillColorArray={['#f17a45', '#f19745', '#f1a545', '#f1b345', '#f1d045']}
         />
       </Form.Group>
-      {errors?.city?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
 
       <Form.Group>
-        <Form.Label>Duration</Form.Label>
+        <Form.Label>Content</Form.Label>
         <hr className={styles.hrguide}/>
         <Form.Control
-          type="text"
-          name="duration"
-          value={duration}
+          type="textarea"
+          rows={6}
+          name="content"
+          value={content}
           onChange={handleChange}
         />
       </Form.Group>
-      {errors?.duration?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
-
-      <Form.Group>
-        <Form.Label>Cost per tour</Form.Label>
-        <hr className={styles.hrguide}/>
-        <Form.Control
-          type="text"
-          name="cost"
-          value={cost}
-          onChange={handleChange}
-        />
-      </Form.Group>
-      {errors?.cost?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
-
-      <Form.Group>
-        <Form.Label>Email address</Form.Label>
-        <hr className={styles.hrguide}/>
-        <Form.Control
-          type="email"
-          name="email"
-          value={email}
-          onChange={handleChange}
-        />
-      </Form.Group>
-      {errors?.email?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
-
-      <Form.Group>
-        <Form.Label>Contact number</Form.Label>
-        <hr className={styles.hrguide}/>
-        <Form.Control
-          type="text"
-          name="phone"
-          value={phone}
-          onChange={handleChange}
-        />
-      </Form.Group>
-      {errors?.phone?.map((message, idx) => (
+      {errors?.content?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
         </Alert>
@@ -149,14 +92,14 @@ const ReviewCreateForm = () => {
         cancel
       </Button>
       <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
-        create
+        Save
       </Button>
     </div>
   );
 
   return (
     <Form onSubmit={handleSubmit}>
-      <div className="text-center">Create your Guide here</div>
+      <div className="text-center">Write your review here!</div>
       <hr className={styles.hrguide}/>
         <Container className={styles.Contentcreateguide}>{textFields}</Container>
     </Form>
