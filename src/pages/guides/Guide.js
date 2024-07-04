@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Card from "react-bootstrap/Card";
 import Media from "react-bootstrap/Media";
 
@@ -9,8 +9,6 @@ import Avatar from "../../components/Avatar";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import btnStyles from "../../styles/Button.module.css";
 import styles from "../../styles/Post.module.css";
-import { MoreDropdown } from "../../components/MoreDropdown";
-import { axiosRes } from "../../api/axiosDefaults";
 
 
 const Guide = (props) => {
@@ -28,39 +26,16 @@ const Guide = (props) => {
     average_rating,
     isProfilePage,
     showAll,
-    setGuide,
-    setReviews,
   } = props;
 
-  const [showEditForm, setShowEditForm] = useState(false);
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
   const history = useHistory();
 
-  const handleDelete = async () => {
-    try {
-      await axiosRes.delete(`/reviews/${id}/`);
-      setGuide((prevGuide) => ({
-        results: [
-          {
-            ...prevGuide.results[0],
-            reviews_count: prevGuide.results[0].reviews_count - 1,
-          },
-        ],
-      }));
-
-      setReviews((prevReviews) => ({
-        ...prevReviews,
-        results: prevReviews.results.filter((review) => review.id !== id),
-      }));
-    } catch (err) {
-      // console.log(err);
-    }
-  };
 
   return (
-    <Media className={styles.Post}>
-      <Media.Body>
+    <Card className={styles.Post}>
+      <Card.Body>
         {!isProfilePage && (
           <Media className="align-items-center justify-content-between">
             <Link to={`/profiles/${profile_id}`}>
@@ -117,15 +92,8 @@ const Guide = (props) => {
             Guide Reviews
           </Button>
         )}
-      </Media.Body>
-        {is_owner && !showEditForm && (
-        <MoreDropdown
-        handleEdit={() => setShowEditForm(true)}
-        handleDelete={handleDelete}
-        />
-         )}
-         
-      </Media>
+      </Card.Body>  
+      </Card>
         
   );
 };
