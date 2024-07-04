@@ -52,36 +52,48 @@ const ProfilePage = () => {
       await axios.delete(`/guides/${guideId}/`);
       await axiosRes.put(`/profiles/${id}/`, { guideId: null });
       setGuideData(null);
-    } catch (err) {}
+    } catch (err) {
+      console.error("Error deleting guide:",err)
+    }
     handleClose();
   };
 
   useEffect(() => {
     const handleMount = async () => {
       try {
-        const [{ data: pageProfile }, { data: profilePosts }] =
-          await Promise.all([
-            axiosReq.get(`/profiles/${id}/`),
-            axiosReq.get(`/posts/?owner__profile=${id}`),
-          ]);
+        const [{ data: pageProfile }, { data: profilePosts }] = await Promise.all([
+          axiosReq.get(`/profiles/${id}/`),
+          axiosReq.get(`/posts/?owner__profile=${id}`),
+        ]);
+
         setProfileData((prevState) => ({
           ...prevState,
           pageProfile: { results: [pageProfile] },
         }));
         setProfilePosts(profilePosts);
-        try {
-          const { data } = await axiosReq.get(`/guides/${guideId}/`);
-          setGuideData(data);
-        } catch (err) {
-          setGuideData(null);
+
+        // Ensure guideId is correctly set
+        const guideId = pageProfile?.guideId;
+        if (guideId) {
+          try {
+            const { data } = await axiosReq.get(`/guides/${guideId}/`);
+            setGuideData(data);
+            console.log("Guide data:", data);
+          } catch (err) {
+            console.error("Error fetching guide data:", err);
+            setGuideData(null);
+          }
         }
-        setHasLoaded(true);
       } catch (err) {
-          setGuideData(null);
+        console.error("Error fetching profile or posts data:", err);
+        setGuideData(null);
+      } finally {
+        setHasLoaded(true);
       }
     };
+
     handleMount();
-  }, [id, setProfileData, guideId]);
+  }, [id, setProfileData]);
 
   const mainProfile = (
     <>
