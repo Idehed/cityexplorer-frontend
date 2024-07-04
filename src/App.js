@@ -40,7 +40,6 @@ function App() {
             filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_at&`}/>} />
           <Route exact path="/signin" render={() => <SignInForm />} />
           <Route exact path="/signup" render={() => <SignUpForm />} />
-          <Route exact path="/contact" render={() => <h1>Contact</h1>} />
           <Route exact path="/posts/create" render={() => <PostCreateForm />} />
           <Route exact path="/posts/:id" render={() => <PostPage />} />
           <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />
