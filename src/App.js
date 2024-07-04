@@ -18,6 +18,7 @@ import GuideCreateForm from './pages/guides/GuideCreateForm';
 import GuidePage from './pages/guides/GuidePage';
 import NotFound from './components/NotFound';
 import ReviewCreateForm from './pages/reviews/ReviewCreateForm';
+import ReviewPage from './pages/reviews/ReviewPage';
 
 
 function App() {
@@ -50,6 +51,7 @@ function App() {
           <Route exact path="/guides" render={() => <GuidePage />} />
           <Route exact path="/guides/create/" render={() => <GuideCreateForm />} />
           <Route exact path="/reviews/:id/create/" render={() => <ReviewCreateForm />} />
+          <Route exact path="/reviews/:id" render={() => <ReviewPage />} />
 
           <Route render={() => <NotFound />} />
         </Switch>
