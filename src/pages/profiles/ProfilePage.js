@@ -52,6 +52,13 @@ const ProfilePage = () => {
       await axios.delete(`/guides/${guideId}/`);
       await axiosRes.put(`/profiles/${id}/`, { guideId: null });
       setGuideData(null);
+      setProfileData((prevState) => ({
+        ...prevState,
+        pageProfile: {
+          ...prevState.pageProfile,
+          results: [{ ...profile, guideId: null }],
+        },
+      }));
     } catch (err) {
       console.error("Error deleting guide:",err)
     }
