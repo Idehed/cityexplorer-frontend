@@ -122,7 +122,7 @@ const ProfilePage = () => {
         </Col>
         <Col lg={6}>
           <h3 className="m-2">{profile?.owner}</h3>
-          {profile?.guideId && <p>I am a guide!</p>}
+          
           <Row className="justify-content-center no-gutters">
             <Col xs={3} className="my-2">
               <div>{profile?.posts_count}</div>

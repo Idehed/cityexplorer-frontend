@@ -4,6 +4,7 @@ import appStyles from "../../App.module.css";
 import Asset from "../../components/Asset";
 import Profile from "./Profile";
 import { useProfileData } from "../../contexts/ProfileDataContext";
+import logo from "../../assets/people.png";
 
 const PopularProfiles = ({ mobile }) => {
   const {popularProfiles} = useProfileData();
@@ -14,7 +15,7 @@ const PopularProfiles = ({ mobile }) => {
       }`}>
       {popularProfiles.results.length ? (
         <>
-          <p className="text-center">More profiles <i className="fa-solid fa-user-check"></i></p>
+          <p className="text-center">More profiles <img src={logo} alt="logo" height="45"/></p>
           <hr/>
           {mobile ? (
             <div className="d-flex justify-content-around">

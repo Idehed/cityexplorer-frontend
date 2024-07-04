@@ -46,6 +46,16 @@
     color: #2142b2;
   }
   
+  .Red {
+    background-color: #712e1e;
+    color: #ffffff;
+  }
+  
+  .Red:hover {
+    background-color: #ffffff;
+    color: #712e1e;
+  }
+  
   .Black,
   .BlackOutline:hover {
     /* background-color: #242a3d;

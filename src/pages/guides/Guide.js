@@ -45,23 +45,23 @@ const Guide = (props) => {
           </Media>
         )}
         <p className="text-center">
-          City:
+          City:{" "}
           {city}
         </p>
         <p className="text-center">
-          Duration:
+          Duration:{" "}
           {duration}
         </p>
         <p className="text-center">
-          Cost: 
+          Cost:{" "}
           {cost}
         </p>
         <p className="text-center">
-          Email:
+          Email:{" "}
           {email}
         </p>
         <p className="text-center">
-          Phone:
+          Phone:{" "}
           {phone}
         </p>
         <p className="text-center">
