@@ -9,13 +9,13 @@ import appStyles from "../../App.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { fetchMoreData } from "../../utils/utils";
 import Asset from "../../components/Asset";
-import styles from "../../styles/PostsPage.module.css";
 import { axiosReq } from "../../api/axiosDefaults";
 import InfiniteScroll from "react-infinite-scroll-component";
 import NoResults from "../../assets/no-results.png";
 
 import { useLocation, useParams } from "react-router-dom/cjs/react-router-dom";
 import Guide from "../guides/Guide";
+import Review from "./Review";
 
 const ReviewPage = ({ message }) => {
     const [reviews, setReviews] = useState({ results: [] });
@@ -40,7 +40,7 @@ const ReviewPage = ({ message }) => {
         const fetchGuide = async () => {
             try {
               const { data } = await axiosReq.get(`/guides/${id}`);
-              setArtistData(data);
+              setGuideData(data);
             } catch (err) {
               // console.log(err);
             }
@@ -54,8 +54,7 @@ const ReviewPage = ({ message }) => {
       return (
         <Row className="h-100 d-flex justify-content-center">
           <Col className="py-2 p-0 p-lg-2" lg={8}>
-            <p className="text-center">More profiles</p>
-            <PopularProfiles />
+            <p className="text-center">Reviews</p>
     
             <Guide {...guideData} isProfilePage={false} />
     
