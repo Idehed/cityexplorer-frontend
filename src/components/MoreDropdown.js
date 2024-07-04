@@ -82,3 +82,32 @@ export function ProfileEditDropdown({ id }) {
     </Dropdown>
   );
 }
+
+export const ReviewsDropdown = ({ id, handleDelete  }) => {
+  const history = useHistory();
+  return (
+    <Dropdown className="ml-auto" drop="left">
+      <Dropdown.Toggle as={ThreeDots} />
+
+      <Dropdown.Menu
+        className="text-center"
+        popperConfig={{ strategy: "fixed" }}
+      >
+        <Dropdown.Item
+          className={styles.DropdownItem}
+          onClick={() => history.push(`/reviews/${id}/edit`)}
+          aria-label="edit"
+        >
+          <i className="fas fa-edit" />
+        </Dropdown.Item>
+        <Dropdown.Item
+          className={styles.DropdownItem}
+          onClick={handleDelete}
+          aria-label="delete"
+        >
+          <i className="fas fa-trash-alt" />
+        </Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
+  );
+};
