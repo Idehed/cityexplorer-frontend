@@ -17,7 +17,7 @@ import { useLocation, useParams } from "react-router-dom/cjs/react-router-dom";
 import Guide from "../guides/Guide";
 import Review from "./Review";
 
-const ReviewPage = ({ message }) => {
+const ReviewPage = () => {
     const [reviews, setReviews] = useState({ results: [] });
     const [hasLoaded, setHasLoaded] = useState(false);
     const { pathname } = useLocation();
@@ -29,7 +29,7 @@ const ReviewPage = ({ message }) => {
     useEffect(() => {
         const fetchReviews = async () => {
           try {
-            const { data } = await axiosReq.get(`/reviews/?guide?${id}`);
+            const { data } = await axiosReq.get(`/reviews/?guide=${id}`);
             setReviews(data);
             setHasLoaded(true);
           } catch (err) {
