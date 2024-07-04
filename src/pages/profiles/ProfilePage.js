@@ -60,6 +60,9 @@ const ProfilePage = () => {
 
   useEffect(() => {
     const handleMount = async () => {
+      setHasLoaded(false);
+      setGuideData(null); // Reset guide data when profile ID changes
+      
       try {
         const [{ data: pageProfile }, { data: profilePosts }] = await Promise.all([
           axiosReq.get(`/profiles/${id}/`),
