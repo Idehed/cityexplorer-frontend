@@ -70,7 +70,7 @@ function PostCreateForm() {
   const textFields = (
     <div className="text-center">
       <Form.Group>
-        <Form.Label>Title</Form.Label>
+        <Form.Label>City</Form.Label>
         <Form.Control
           type="text"
           name="title"

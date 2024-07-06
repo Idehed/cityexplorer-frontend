@@ -54,7 +54,7 @@ function PostsPage({ message, filter = "" }) {
       {pathname === "/" && (
         <>
         <h2 className="text-center">
-          Explore
+          Explore new places here
         </h2>
         <hr/>
         </>
