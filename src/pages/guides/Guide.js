@@ -44,6 +44,7 @@ const Guide = (props) => {
             </Link>
           </Media>
         )}
+        <p className="text-left mt-2">Book me as your guide!</p>
         <p className="text-center">
           City:{" "}
           {city}
@@ -76,7 +77,7 @@ const Guide = (props) => {
         </p>
         {!is_owner && (
           <Button
-            className={btnStyles.Button}
+            className={`${btnStyles.Button} ${btnStyles.Blue}`}
             onClick={() => history.push(`/reviews/${id}/create`)}
             aria-label="create-review"
           >
@@ -85,7 +86,7 @@ const Guide = (props) => {
         )}
         {showAll && (
           <Button
-            className={btnStyles.Button}
+            className={`${btnStyles.Button} ${btnStyles.Blue}`}
             onClick={() => history.push(`/reviews/${id}`)}
             aria-label="view-reviews"
           >

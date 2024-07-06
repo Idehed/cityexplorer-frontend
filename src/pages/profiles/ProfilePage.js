@@ -220,7 +220,7 @@ const ProfilePage = () => {
       ) : (
         <Asset
           src={NoResults}
-          message={`No results found, ${profile?.owner} hasn't posted yet.`}
+          message={`No posts yet, ${profile?.owner} has been lazy...`}
         />
       )}
     </>
@@ -229,7 +229,7 @@ const ProfilePage = () => {
   const mainGuide = (
     <>
       {profile?.guideId && is_owner && (
-        <Button className={`${btnStyles.Button} mb-2`} onClick={handleShow}>
+        <Button className={`${btnStyles.Button} ${btnStyles.Blue} mb-2`} onClick={handleShow}>
           Remove as guide
         </Button>
       )}

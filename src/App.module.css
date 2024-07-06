@@ -29,6 +29,10 @@
   object-fit: contain;
 }
 
+h2 {
+  font-size: 1.3rem;
+}
+
 * {
     box-sizing: border-box;
   }

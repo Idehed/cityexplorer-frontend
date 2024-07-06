@@ -102,7 +102,7 @@ const Post = (props) => {
               placement="top"
               overlay={<Tooltip>You can't like your own post!</Tooltip>}
             >
-              <i className="far fa-heart" />
+              <i className={`far fa-heart ${styles.HeartOutline}`} />
             </OverlayTrigger>
           ) : like_id ? (
             <span onClick={handleUnlike}>

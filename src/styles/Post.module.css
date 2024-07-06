@@ -20,5 +20,9 @@
   }
   
   .HeartOutline:hover {
+    color: #ac6d00;
+  }
+
+  .HeartOutline {
     color: #ffa101;
   }

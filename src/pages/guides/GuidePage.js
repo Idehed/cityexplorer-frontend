@@ -15,6 +15,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import NoResults from "../../assets/no-results.png";
 import Guide from "./Guide";
 import { useLocation } from "react-router-dom/cjs/react-router-dom";
+import logo from "../../assets/tour-guide.png";
 
 const GuidePage = ({ message, filter = "" }) => {
     const [guides, setGuides] = useState({ results: [] });
@@ -48,9 +49,9 @@ const GuidePage = ({ message, filter = "" }) => {
       return (
         <Row className="h-100 d-flex justify-content-center">
           <Col className="py-2 p-0 p-lg-2" lg={8}>
-          <h1 className="text-center">Guides</h1>
+          <h2 className="text-center">Guides <img src={logo} alt="logo" height="40"/></h2>
           <hr/>
-            <i className={`fas fa-search ${styles.SearchIcon}`} />
+            <i className={`fa-solid fa-magnifying-glass-arrow-right ${styles.SearchIcon}`} />
             <Form
               className={styles.SearchBar}
               onSubmit={(event) => event.preventDefault()}

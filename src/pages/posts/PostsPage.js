@@ -18,6 +18,9 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import logo from "../../assets/architecture-and-city.png";
+import logo1 from "../../assets/social-media.png"
+import logo2 from "../../assets/social-media (1).png"
 
 function PostsPage({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
@@ -53,8 +56,8 @@ function PostsPage({ message, filter = "" }) {
       <Col className="py-2 p-0 p-lg-2" lg={8}>
       {pathname === "/" && (
         <>
-        <h2 className="text-center">
-          Explore new places here
+        <h2 className= "text-center">
+          Explore new cities here <img src={logo} alt="logo" height="40"/>
         </h2>
         <hr/>
         </>
@@ -62,7 +65,7 @@ function PostsPage({ message, filter = "" }) {
       {pathname === "/following" && (
         <>
         <h2 className="text-center">
-          Your followed user posts
+          Your followed user posts <img src={logo1} alt="logo" height="40"/>
         </h2>
         <hr/>
         </>
@@ -70,16 +73,12 @@ function PostsPage({ message, filter = "" }) {
       {pathname === "/liked" && (
         <>
         <h2 className="text-center">
-          Your liked posts
+          Your liked posts <img src={logo2} alt="logo" height="40"/>
         </h2>
         <hr/>
         </>
       )}
         <PopularProfiles mobile />
-
-        {pathname !== "/" && pathname !== "/following" && pathname !== "/liked" &&(
-
-          <>
         <i
           className={`fa-solid fa-magnifying-glass-arrow-right ${styles.SearchIcon}`}
         />
@@ -92,11 +91,10 @@ function PostsPage({ message, filter = "" }) {
             onChange={(event) => setQuery(event.target.value)}
             type="text"
             className="mr-sm-2"
-            placeholder="Search posts"
+            placeholder="Search posts by profilename or city"
           />
         </Form>
-        </>
-        )}
+        
 
         {hasLoaded ? (
           <>
