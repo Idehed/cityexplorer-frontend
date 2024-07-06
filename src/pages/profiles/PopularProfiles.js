@@ -5,9 +5,11 @@ import Asset from "../../components/Asset";
 import Profile from "./Profile";
 import { useProfileData } from "../../contexts/ProfileDataContext";
 import logo from "../../assets/people.png";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 const PopularProfiles = ({ mobile }) => {
   const {popularProfiles} = useProfileData();
+  const currentUser = useCurrentUser();
 
   return (
     <Container className={`${appStyles.Content} ${
@@ -28,6 +30,13 @@ const PopularProfiles = ({ mobile }) => {
               <Profile key={profile.id}  profile={profile} />
             ))
           )}
+           { currentUser ? 
+           <p></p>
+            :
+            <> 
+            <hr/> 
+            <p className="text-center">Sign in to follow profiles</p>
+            </>}
         </>
       ) : (
         <Asset spinner />

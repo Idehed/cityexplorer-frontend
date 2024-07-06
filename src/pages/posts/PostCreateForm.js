@@ -79,7 +79,7 @@ function PostCreateForm() {
         />
       </Form.Group>
       {errors?.title?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
+        <Alert variant="danger" key={idx}>
           {message}
         </Alert>
       ))}
@@ -95,7 +95,7 @@ function PostCreateForm() {
         />
       </Form.Group>
       {errors?.content?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
+        <Alert variant="danger" key={idx}>
           {message}
         </Alert>
       ))}
@@ -154,7 +154,7 @@ function PostCreateForm() {
               />
             </Form.Group>
             {errors?.image?.map((message, idx) => (
-              <Alert variant="warning" key={idx}>
+              <Alert variant="danger" key={idx}>
                 {message}
               </Alert>
             ))}

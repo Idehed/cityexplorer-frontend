@@ -121,7 +121,7 @@ const GuideCreateForm = () => {
         />
       </Form.Group>
       {errors?.email?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
+        <Alert variant="danger" key={idx}>
           {message}
         </Alert>
       ))}
