@@ -1,6 +1,4 @@
-# CityXP
-
-![CityEP](src/assets/family.png)
+# CityXP ![CityEP](src/assets/family.webp)
 
 About text
 
@@ -18,13 +16,12 @@ The repository for the backend of the application can be found here:<br>[CityXP 
 * [UX](#ux)
   * [User Goals](#user-goals)
   * [Agile and planning](#agile-and-planning)
-  * [Wireframes](#wireframes)
   * [User stories](#user-stories)
+  * [Wireframes](#wireframes)
   * [Design choices](#design-choices)
     * [Colors](#colors)
     * [Typography](#typography)
     * [Imagery](#imagery)
-* [Features](#features)
   * [Future Features](#future-features)
 * [Website layout](#website-layout)
   * [Navbar](#navbar)
@@ -65,43 +62,143 @@ The repository for the backend of the application can be found here:<br>[CityXP 
 <hr>
 The API and Frontend of this project was planned using Agile methodology and MoSCoW prioritization on github projects.
 
-**The user stories project can be found [here]()**
+**The user stories project can be found [here](https://github.com/users/Idehed/projects/6)**
 
 
-The project was illustrated by 13 initial Milestone entitled<br>
+This projects user stories were divided into 9 milestones<br>
 
 
-providing the developer with the freedom to accomplish all issues/tasks flexibly before dates deadline set to June. The Milestones were broken according to their components name main functions.
+    - Authentication 
+    - Navigation  
+    - Posts
+    - Profile
+    - Comments
+    - Likes
+    - Contact
+    - Guides
+    - Followers
 
-Throughout the development process, new milestones were added, where tasks started from "Todo," progressing to "In Progress," and finally "Done". The issues were assigned to the sole developer and labeled as "could-have," "should-have,", "must-have", "wont-have" and later on labels like "has been implemented" and "future implementation" was also added.
 
-### Wireframes:
-Home page:<br>
-![Home]()<br>
+ The Milestones were broken according to their component's name and main functions.
+ All the user stories have been labeled and assigned to the developer and some labels have been put later such as "won't fix" and "Future implementation".
 
-Liked page:<br>
-![Liked]()<br>
+ [Project user stories table can be found here](https://github.com/users/Idehed/projects/6)
 
-Login page:<br>
-![Login]()<br>
+![Project overview](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/5a7e4371-aad6-4128-ba28-2e9256662420)
 
-Profile page:<br>
-![Profile]()<br>
-
-Saved posts page:<br>
-![Saved]()<br>
-
-Sign up page:<br>
-![Signup]()<br>
-
-&ensp;
 ### User Stories:
 
 <details>
 <summary>
-<b style="font-size: 15px; font-style: italic;">User stories Milestone list</b>
+<b>User stories Milestone list</b>
 </summary>
 <summary>
+
+#### Authentication
+
+    - As a user I can sign in to the app so that I can access functionality for logged in users 
+
+    - As a user I can create a new account so that I can access all the features for signed up users  
+
+    - As a user I can maintain my logged-in status until I choose to log out so that my user experience is not compromised
+
+    
+
+#### Navigation
+
+    - As a user I can view a navbar from every page so that I can navigate easily between pages 
+
+    - As a user I can navigate through pages quickly so that I can view content seamlessly without page refresh  
+
+    - As a logged out user I can see sign in and sign up options so that I can sign in/sign up
+
+#### Posts
+
+    - As a logged in user I can view content filtered by users I follow so that I can keep up to date with what they are posting about 
+
+    - As a user I can view the posts page so that I can read the comments about the post  
+
+    - As a post owner I can edit my post title and description so that I can make corrections or update my post after it was created
+
+    - As a user, I can search for posts with keywords, so that I can find the posts and user profiles I am most interested in
+
+    - As a user I can keep scrolling through the images on the site, that are loaded for me automatically so that I don't have to click on "next page" etc
+
+    - As a user I can view all the most recent posts, ordered by most recently created first so that I am up to date with the newest content
+
+    - As a user I can view the details of a single post so that I can learn more about it
+
+    - As a logged in user I can create posts so that I can share my images with the world!
+
+#### Profile
+
+    - As a logged in user I can add my social links to my profile so others can find/follow me on other platforms
+
+    - As a logged in user I can update my username and password so that I can change my display name and keep my profile secure
+
+    - As a logged in user I can edit my profile so that I can change my profile picture and bio
+
+    - As a user I can view basic profile information like: avatar, bio, number of posts, follows and users followed so that I can learn more about them
+
+    - As a user I can view other users profiles so that I can see their posts and learn more about them
+
+    - As a user I can view user's avatars so that I can easily identify users of the application
+
+#### Comments
+
+    - As an owner of a comment I can edit my comment so that I can fix or update my existing comment
+
+    - As an owner of a comment I can delete my comment so that I can control the removal of my comment from the application
+
+    - As a user I can see how long ago a comment was made so that I know how old a comment is
+
+    - As a user I can read comments on posts so that I can read what other users think about the posts
+
+    - As a logged in user I can add comments to a post so that I can share my thoughts about the post
+
+#### Likes
+
+    - As a logged in user I can view the posts I liked so that I can find the posts I enjoy the most
+
+    - As a logged in user I can like a post so that I can show my support for the posts that interest me
+
+#### Contact
+
+    - As a user I can navigate to a specific contact page where I can write a message to the admins so that I can get help, ask questions, or send feedback when needed
+
+#### Guides
+
+    - As a user I would like to be able to edit the review that I posted on a guides profile page
+
+    - As a user I would like to be able to delete the review that I posted on a guides profile page
+
+    - As a user I would like to be able to edit the rating that I posted on a guides profile page
+
+    - As a user I would like to be able to delete the rating that I posted on a guides profile page
+
+    - As a user I would like to be able to rate a guide so that others can see my rating
+
+    - As a user I would like to be able to leave a review so that others can see what I thought about the guide
+
+    - As a user I would like to be able to edit my guide profile
+
+    - As a user I would like to be able to delete my guide profile
+
+    - As a user I would like to be able to register as a guide in my profile so that people can book me as a guide
+
+    - As a user I would like to be able to search for other guides/cities so that I can find what I am looking for faster
+
+    - As a user I would like to be able to view Guides details so I can find the best guide for me
+
+    - As a user I would like to be able to view other Guides so that I can book them with a city I would like to visit
+
+#### Followers
+
+    - As a logged in user I can follow and unfollow other users so that I can see and remove posts by specific users in my posts feed
+
+    - As a user I can see a list of more followers profiles so that I can see/follow them
+
+
 
 
 </summary>
@@ -109,8 +206,47 @@ Sign up page:<br>
 
 <br>
 
-[Project user stories table can be found here]()
-![Project overview]()
+### Wireframes:
+
+<details>
+<summary>
+<b>Wireframes:</b>
+</summary>
+<summary>
+
+I created these wireframes using the Balsamiq app. As the wireframes is not supposedI to be the finishing product i made some changes in the Frontend application. Such as having the navbar at the top instead of on the left side. It was much more work and harder than I thought it would be.
+
+Home page:<br>
+![Explore](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/8e21fae4-8e96-492e-a54a-8c5c3c6a3ca1)<br>
+
+Following posts page:<br>
+![Following](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/1b37c1a7-b73b-4a30-8612-6eb09d0bd3f0)<br>
+
+Guides page:<br>
+![Guides](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/d89eb4a0-d12c-45e9-bda0-faff9002cca7)<br>
+
+Liked page:<br>
+![Liked](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/4082b550-907f-44be-be4a-0559a347dc6f)<br>
+
+Profile page:<br>
+![Profile](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/9c75cddc-a80f-4e6d-a26a-b98f744958bf)<br>
+
+Contact page:<br>
+![Contact](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/45db504f-719d-494f-8440-db5a9a4046fc)<br>
+
+Create posts:<br>
+![Create posts](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/0de4ed06-cd18-4998-ad64-f84a043c54dc)<br>
+
+Create guide:<br>
+![Create guide](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/c6501dc6-09c5-426a-9878-4cdcd83d0c5f)<br>
+
+Sign in page:<br>
+![Signin](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/a3084acf-9d49-4c31-a9e2-9a19e44dbce0)<br>
+
+Sign up page:<br>
+![Signup](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/95fe299f-61ab-463d-b524-173f2c58cf39)<br>
+
+</details>
 
 ### Design Choices
 
@@ -121,16 +257,42 @@ Sign up page:<br>
 ![]()
 
 #### Typography
+I wanted a font that was clean and easy but still looked inviting.
+I choose the Poppins bacausue of just that its clean and friendly aesthetic, excellent legibility, and versatility across various design applications.
 
-![]()<br>
+![Poppins](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/8b9bcd3b-6881-4040-af40-0574c9ae2614)<br>
 
 #### Imagery
+I wanted the website to look clean but with some fun and playful icons to go with it. I used these icons to add more color to it. <br>
+![Houses](src/assets/architecture-and-city.webp)<br>
+<br>
+![Family](src/assets/family.webp)<br>
+<br>
+![Inbox](src/assets/inbox.webp)<br>
+<br>
+![Arrow down](src/assets/low.webp)<br>
+<br>
+![Not Found](src/assets/page-not-found.webp)<br>
+<br>
+![Person](src/assets/people.webp)<br>
+<br>
+![Likes](src/assets/social-media%20(1).webp)<br>
+<br>
+![Followers](src/assets/social-media.webp)<br>
+<br>
+![Guide](src/assets/tour-guide.webp)<br>
 
-
-# Features
 
 
 ## Future Features
+<b>Notification:</b><br>
+Notification for the user if someone has likes, commented or followed you would be nice to have.
+
+<b>Comment on a comment:</b><br>
+Be able to comment back on a specific comment.
+
+<b>Like on a comment:</b><br>
+To be able to like a comment that you find interesting. Instead of having to comment on it to answer.
 
 
 # Website layout
@@ -286,163 +448,136 @@ __Infinite scroll__
 <summary>Component Reusability</summary>
 <summary>
 
-1. **Asset.js:**<br> This component displays a spinner wherever the page is loading in data, scr or messages that can be edited for the specific purpose in the specific .js component.<br>It can be reused wherever a spinner could be needed, where a scr needs to be called (a specific image for example) or when a message needs to be specified.<br>
+1. **Asset.js:**<br> This component displays a spinner wherever the page is loading in data.<br>
 
-* From this component `Const Asset` is considered a reusable component and has been reused in:<br>
+* This component has been reused in:<br>
 
-   NotFound.js, PostCreateForm.js, PostPage.js, PostsPage.js, PopularProfiles.js, ProfilePage.js to display a spinner whenever content is loading. <br>
+   NotFound.js, GuidePage.js PostCreateForm.js, PostPage.js, PostsPage.js, PopularProfiles.js, ProfilePage.jsand ReviewPage <br>
 
 2. **Avatar.js:**<br> This component provides a form for handling the Avatar images.<br>
-It can be reused whenever users need to add avatars or static images before a user or admin changes the image.<br>
 
-* From this component `Const Avatar` is considered a reusable component and has been reused in:<br>
+* This component has been reused in:<br>
 
-   NavBar.js, Comment.js, CommentCreateForm.js, Post.js and Profile.js to handle and import the avatar for the user.<br>
+   NavBar.js, Comment.js, CommentCreateForm.js, Guide.js, Post.js, Profile.js and Reviews.js to handle and import the avatar for the user.<br>
 
-3. **CategoryFilter.js:**<br> This component incapsulates functionality that fetches categories from an API and displays them in a dropdown menu, allowing users to filter items based on the selected category.<br>
-Can be reused in different situations where a drop down list with filtering for categories etc is needed.<br>
+3. **MoreDropdown.js:**<br> 
+This component can be reused as a simple dropdown menu in different scenarios for when users need to edit somthing like a comment, post, profile etc.<br>
 
-* From this component `Const CategoryFilter` is considered a reusable component and has been reused in:<br>
+* This component has been reused in:<br>
 
-   PostsPage.js to render the Category filtering of posts.<br>
+   Comment.js and Post.js to render the dropdown menu the enable the user to edit their data.<br>
 
-4. **MoreDropdown.js:**<br> This component are designed to be modular and configurable, which allows for easy reuse with different props and configurations.<br>
-Can be reused as a simple dropdown menu in different scenarios for when users need to edit a comment, post, photos etc.<br>
+4. **Navbar.js:**<br> This component presents a navbar with links to different "pages".<br>
+It can be reused across different parts where you would need a navbar.<br>
 
-* From this component `const MoreDropdown` is considered a reusable component and has been reused in:<br>
-
-   Comment.js, Post.js and ProfilePage.js to render the dropdown menu the enable the user to edit their data.<br>
-
-5. **Navbar.js:**<br> This component presents a form for users to update their passwords.<br>
-It can be reused across different parts of the application where password updating functionality is needed.<br>
-
-* From this component `const NavBar` is considered a reusable component and has been reused in:<br>
+* This component has been used in:<br>
 
    App.js to render the navbar on the entire website no matter what url path the user is currently located at.
 
-6. **NotFound.js:**<br> This component displays and handles the image and message that is displayed when information can't be found.<br>
+5. **NotFound.js:**<br> This component displays and handles the image and message that is displayed when information can't be found.<br>
 
-* From this component `const NotFound` has been used in App.js inside a path to display a "Not found" message when a user wants to use a path that doesn't exist. 
-The `const NotFound` was also given a source of `NoResults` and this has been reused in:<br>
+* This component has been used in App.js inside a path to display a "Not found" message when a user wants to use a path that doesn't exist. 
+The component was also given a source of `NoResults` and this has been reused in:<br>
 
-   PostsPage.js and ProfilePage.js to display an image and a message to the user when no posts can be found.<br>
+   PostsPage.js, GuidePage, ReviewPage and ProfilePage.js to display an image and a message to the user when no posts/Guides or Reviews can be found.<br>
 
-7. **SignInForm.js:**<br> This component displays and handles user sign in to the website.<br>
-It can be reused in different scenarios such as Employee Portals, Admin Dashboard or in E-commerce stores for users to sign in to their accounts.<br>
+6. **SignInForm.js:**<br> This component displays and handles user sign in to the website.<br>
 
-* From this component `function SignInForm` is considered a reusable component and has been used in:<br>
-
-   App.js to render the SignInForm on the correct url path.<br>
-
-8. **SignUp.js:**<br> This component provides a way for users to register an account on the website.<br>
-It can be reused in situations like event registrations, subscriptions or online course platforms for example.<br>
-
-* From this component `const SignUpForm` is considered a reusable component and has been used in:<br>
+* This component has been used in:<br>
 
    App.js to render the SignInForm on the correct url path.<br>
 
-9. **Comment.js:**<br> This component is designed to display a comment with options to edit or delete it if the current user is the owner.<br>
-This component can be reused in different contexts where similar functionality is needed such as blog post comments, forum threads or product reviews.<br>
+7. **SignUp.js:**<br> This component provides a way for users to register an account on the website.<br>
 
-* From this component `const Comment` is considered a reusable component and has been reused in:<br>
+* This component has been used in:<br>
+
+   App.js to render the SignInForm on the correct url path.<br>
+
+8. **Comment.js:**<br> This component is designed to display a comment with options to edit or delete it if the current user is the owner.<br>
+
+* This component has been used in:<br>
 
     PostPage.js to fetch comments related to the specific post.<br>
 
-10. **CommentCreateForm.js:**<br> This component is designed to allow users to create new comments. It includes functionality to submit the comment, update the UI with the newly created comment, and reset the form state after submission.<br>
-Can be used in the same scenarios and together with Comment.js.<br>
+9. **CommentCreateForm.js:**<br> This component is designed to allow users to create new comments. It includes functionality to submit the comment, update the UI with the newly created comment, and reset the form state after submission.<br>
 
-* From this component `function CommentCreateForm` is considered a reusable component and has been reused in:<br>
+* This component has been used in:<br>
 
     PostPage.js to render a form to create and post comments.<br>
 
-11. **CommentEditForm.js:**<br> This component allows users to edit existing comments. It provides functionality to update the comment's content and save those changes via an API request.<br>
-Can be used in the same scenarios and together with Comment.js and CommentCreateForm.js.<br>
+10. **CommentEditForm.js:**<br> This component allows users to edit existing comments. It provides functionality to update the comment's content and save those changes via an API request.<br>
 
-* From this component `function CommentEditForm` is considered a reusable component and has been reused in:<br>
+* This component has been used in:<br>
 
     Comment.js to render a form for editing the posted comment.<br>
+11. **UseRedirect.js**<br> This component is designed to redirect a user if they are trying to access something they are not suppose to. Or if the tokens have expired they will get redirected to the signin page.
 
-12. **ContactForm.js:**<br> This component is designed to facilitate user interactions for sending messages through a contact form. It handles form validation, submission via API, and displays success messages in a modal upon successful submission.<br>
-Can be reused as Customer support portals, Feedback forms or Business inquiry forms.<br>
+* This component has been reused in:<br>
 
-* From this component `const ContactForm` is considered a reusable component and has been reused in:<br>
+    SignInForm.js, SignUpForm.js, GuideCreateForm.js, PostCreateForm.js and ReviewCreateForm.js.<br>
 
-    App.js to fetch the ContactForm url path for the Contact Page.<br>
+12. **Post.js:**<br> This component is quite versatile and can be reused in various scenarios where displaying and interacting with posts is required.<br>
 
-13. **Post.js:**<br> This component is quite versatile and can be reused in various scenarios where displaying and interacting with posts is required.<br>
-Can be reused as Blog post display, Forum threads or Portfolio showcases.<br>
-
-* From this component `const Post` is considered a reusable component and has been reused in:<br>
+* This component has been reused in:<br>
 
     PostPage.js and PostsPage.js to import all the data related to the specific post.<br>
 
-14. **PostCreateForm.js:**<br> This component is designed to facilitate the creation of new posts within an application. It includes form fields for entering a post title, content, an optional image upload, and selecting a category. Users can fill out these fields, upload an image if desired, and submit the form to create a new post.<br>
-Can be used in Poll creation.<br>
+13. **PostCreateForm.js:**<br> This component is designed to facilitate the creation of new posts within an application. It includes form fields for entering a post title, content, an optional image upload, and selecting a category. Users can fill out these fields, upload an image if desired, and submit the form to create a new post.<br>
 
-* From this component `function PostCreateForm` is considered a reusable component and has been reused in:<br>
+* This component has been used in:<br>
 
     App.js to render the correct path url for the page that is presenting the Post Create form for creating a post.<br>
 
-14. **PostEditForm.js:**<br> This component is designed to handle the edit form of posts within an application. It includes form fields for entering a post title, content, an optional image upload, and selecting a category but with the option to edit them. Users can edit these fields, change image if desired, and resubmit the form to update the existing post.<br>
-Can be used in Poll creation.<br>
+14. **PostEditForm.js:**<br> This component is designed to handle the edit form of posts within an application. It includes form fields for entering a post title, content, an optional image upload. Users can edit these fields, change image if desired, and resubmit the form to update the existing post.<br>
 
-* From this component `function PostEditForm` is considered a reusable component and has been reused in:<br>
+* This component has been used in:<br>
 
     App.js to render the correct path url for the page that is presenting the Post Edit form for editing an already existing post created with the PostCreateForm component.<br>
 
 15. **PostPage.js:**<br> This component serves as a detailed view for a specific post, displaying the post content along with its comments.<br>
-Can be used as Event page, Recipe page, Article detail page.<br>
 
-* From this component `function PostPage` is considered a reusable component and has been reused in:<br>
+* This component has been used in:<br>
 
     App.js to render a specific postPage with the users posts.<br>
 
 16. **PostsPage.js:**<br> This component is designed to display a list of posts based on different filters and conditions, such as categories, search queries, or user-specific feeds.<br>
-Can be used as a Product listing page, Job listing page or Tutorial/Course directory.<br>
 
-* From this component `function PostsPage` is considered a reusable component and has been reused in:<br>
+* This component has been used in:<br>
 
     App.js to render the PostsPage with every users posted posts.<br>
 
 17. **PopularProfiles.js:**<br> This component is designed to display a list of popular profiles, either in a compact format for mobile devices or a full format for larger screens.<br>
-Can be used as a Featured authors section, Artist spotlight or Top contributors widget.<br>
 
-* From this component `const PopularProfiles` is considered a reusable component and has been reused in:<br>
+* This component has been reused in:<br>
 
     PostPage.js, PostsPage.js and ProfilePage.js to render the popular profiles field to the right of the main containers.<br>
 
 18. **Profile.js:**<br> This component is designed to render a user profile with options for following or unfollowing based on the current user's interaction status with the profile.<br>
-Can be used as a Community memeber widget, Author card in blog posts, Participant list in events pages. <br>
 
-* From this component `const Profile` is considered a reusable component and has been reused in:<br>
+* This component has been used in:<br>
 
-    PopularProfiles.js tho render the profiles in the popular profiles field.<br>
+    PopularProfiles.js to render the profiles in the popular profiles field.<br>
 
 19. **ProfileEditForm.js:**<br> This component allows a user to edit their profile information, including their name, bio, social media links, and profile picture.<br>
-Can be used as User account settings, Artist profile edit, Event organizers profile edit.<br>
 
-* From this component `const ProfileEditForm` is considered a reusable component and has been reused in:<br>
+* This component has been used in:<br>
 
     App.js to fetch the correct url path and the view for the ProfileEditForm page. <br>
 
 20. **ProfilePage.js:**<br> This component is designed to display a user's profile information, including their profile picture, bio, social media links, follower counts, and their posts.<br>
-Can be used as a Portfolio or Company page.<br> 
 
-* From this component `function ProfilePage` is considered a reusable component and has been reused in:<br>
+* This component has been used in:<br>
 
     App.js to fetch the correct url path and the correct data and view for the Profile Page<br>
 
 21. **UsernameForm.js:**<br> This component allows users to change their username.<br>
-Can be used in similar situations where a field of static information can be updated.<br>
 
-* From this component `const UsernameForm` is considered a reusable component and has been reused in:<br>
+* This component has been used in:<br>
 
     App.js to fetch the correct url path and the correct data and view for the Username form used in the Change username page.<br>
 
 22. **UserPasswordForm.js:**<br> This component allows users to change their password. It integrates with React, React Bootstrap for UI components, and Axios for making HTTP requests.
-Can be used in similar situations to give users the possibility to change/update secret data.<br> 
-
-* From this component `const UserPasswordForm` is considered a reusable component and has been reused in:<br>
+* This component has been used in:<br>
 
     App.js to fetch the correct url path and the correct data and view for the user password form used in the Change password page.<br>
 
@@ -550,12 +685,27 @@ Cloning a GitHub repository creates a local copy on your machine, allowing you t
 3. **Clone Command**: Type `git clone`, and then paste the URL you copied in Step 1. Press Enter to create your local clone.
 
 # Credits
+- The lessons and tutorials provided by Code Institute, on the final module entitled "Django REST Framework" for the 'Advanced Front-End' endtitled "moments".
 
+- I have been getting insperation from following users:<br>
+[Gareth McGirr](https://github.com/Gareth-McGirr),<br>
+[Hujanen91](https://github.com/Hujanen91),<br>
 
-## Content
+- I got help with creating the star rating using this website [React-simple-star-rating](https://react-simple-star-rating.vercel.app/?path=/story/introduction--page)
+
 
 
 ## Media
+- Many of my icons has been collected from this website 
+[Flaticon](https://www.flaticon.com/)
+
+- Some others here [Flaticon](https://fontawesome.com/)
+
+- My font is from [Google Fonts Poppins](https://fonts.google.com/specimen/Poppins?query=po)
+
+- The signup and signin images are from [Unsplash](https://unsplash.com/)
 
 
 # Acknowledgements:
+- My mentor [Gareth McGirr](https://github.com/Gareth-McGirr) for his continuing support and great advice throughout this project.
+- The slack community that helped me with many error problems throughout this project!
