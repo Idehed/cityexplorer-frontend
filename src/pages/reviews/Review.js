@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import { Rating } from "react-simple-star-rating";
 import Avatar from "../../components/Avatar";
 import styles from "../../styles/Comment.module.css";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import { DropdownReview } from "../../components/MoreDropdown";
+import { axiosRes } from "../../api/axiosDefaults";
 
 const Review = (props) => {
   const {
@@ -13,8 +16,34 @@ const Review = (props) => {
     updated_at,
     content,
     rating,
-
+    setReviews,
+    setGuide,
+    id,
   } = props;
+
+  const currentUser = useCurrentUser();
+  const is_owner = currentUser?.username === owner;
+
+  const handleDelete = async () => {
+    try {
+      await axiosRes.delete(`/reviews/${id}/`);
+      setGuide((prevGuide) => ({
+        results: [
+          {
+            ...prevGuide.results[0],
+            reviews_count: prevGuide.results[0].reviews_count - 1,
+          },
+        ],
+      }));
+    
+      setReviews((prevReviews) => ({
+        ...prevReviews,
+        results: prevReviews.results.filter((review) => review.id !== id),
+      }));
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <>
@@ -28,13 +57,18 @@ const Review = (props) => {
           <span className={styles.Date}>{updated_at}</span>
           <p>
             Rating:{' '}
-            <Rating readonly initialValue={rating} size={25}/* Available Props */ />
+            <Rating readonly initialValue={rating} size={25}/>
           </p>
           <p>
             Review:{' '}
             {content}
           </p>
         </Media.Body>
+        {is_owner && (
+          <DropdownReview
+            handleDelete={handleDelete}
+          />
+        )}
       </Media>
     </>
   );

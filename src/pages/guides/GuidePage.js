@@ -50,7 +50,7 @@ const GuidePage = ({ message, filter = "" }) => {
         <Row className="h-100 d-flex justify-content-center">
           <Col className="py-2 p-0 p-lg-2" lg={8}>
           <h2 className="text-center">Guides <img src={logo} alt="logo" height="40"/></h2>
-          <hr/>
+          <hr width="80%"/>
             <i className={`fa-solid fa-magnifying-glass-arrow-right ${styles.SearchIcon}`} />
             <Form
               className={styles.SearchBar}

@@ -24,7 +24,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import Post from "../posts/Post";
 import { fetchMoreData } from "../../utils/utils";
 import NoResults from "../../assets/page-not-found.webp";
-import { ProfileEditDropdown } from "../../components/MoreDropdown";
+import { ProfileEditDropdown, ProfileEditDropdown2 } from "../../components/MoreDropdown";
 import Modal from "react-bootstrap/Modal";
 import Guide from "../guides/Guide";
 import logo from "../../assets/low.webp";
@@ -113,6 +113,10 @@ const ProfilePage = () => {
         handleDeleteGuide={handleDeleteGuide} 
         />
       )}
+      {profile?.is_owner && guideId && (
+        <ProfileEditDropdown2 id={profile?.id}
+        handleDeleteGuide={handleDeleteGuide} />
+      )}
       <Row noGutters className="px-3 text-center">
         <Col lg={3} className="text-lg-left">
           <Image
@@ -130,11 +134,11 @@ const ProfilePage = () => {
             </Col>
             <Col xs={3} className="my-2">
               <div>{profile?.followers_count}</div>
-              <div>followers</div>
+              <div className="mr-2">followers</div>
             </Col>
             <Col xs={3} className="my-2">
               <div>{profile?.following_count}</div>
-              <div>following</div>
+              <div className="ml-2">following</div>
             </Col>
           </Row>
 
@@ -176,7 +180,7 @@ const ProfilePage = () => {
                 </a>
               )}
             </div>
-            <hr />
+            <hr width="80%"/>
             
         </Col>
         <Col lg={3} className="text-lg-right">
@@ -205,7 +209,7 @@ const ProfilePage = () => {
 
   const mainProfilePosts = (
     <>
-      <hr />
+      <hr width="80%"/>
       <p className="text-center">My posts <img src={logo} alt="logo" height="30" /></p>
       {profilePosts.results.length ? (
         <InfiniteScroll

@@ -38,13 +38,14 @@ const Guide = (props) => {
       <Card.Body>
         {!isProfilePage && (
           <Media className="align-items-center justify-content-between">
-            <Link to={`/profiles/${profile_id}`}>
+            <Link className="h4" to={`/profiles/${profile_id}`}>
               <Avatar src={profile_image} height={100} />
               {owner}
             </Link>
           </Media>
         )}
         <p className="text-left mt-2">Book me as your guide!</p>
+        <hr align="left" width="35%"/>
         <p className="text-center">
           City:{" "}
           {city}

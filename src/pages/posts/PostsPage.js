@@ -59,7 +59,7 @@ function PostsPage({ message, filter = "" }) {
         <h2 className= "text-center">
           Explore new cities here <img src={logo} alt="logo" height="40"/>
         </h2>
-        <hr/>
+        <hr width="80%"/>
         </>
       )}
       {pathname === "/following" && (
@@ -67,7 +67,7 @@ function PostsPage({ message, filter = "" }) {
         <h2 className="text-center">
           Your followed user posts <img src={logo1} alt="logo" height="40"/>
         </h2>
-        <hr/>
+        <hr width="80%"/>
         </>
       )}
       {pathname === "/liked" && (
@@ -75,7 +75,7 @@ function PostsPage({ message, filter = "" }) {
         <h2 className="text-center">
           Your liked posts <img src={logo2} alt="logo" height="40"/>
         </h2>
-        <hr/>
+        <hr width="80%"/>
         </>
       )}
         <PopularProfiles mobile />

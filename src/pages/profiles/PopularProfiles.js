@@ -18,7 +18,7 @@ const PopularProfiles = ({ mobile }) => {
       {popularProfiles.results.length ? (
         <>
           <p className="text-center">More profiles <img src={logo} alt="logo" height="30"/></p>
-          <hr/>
+          <hr width="80%"/>
           {mobile ? (
             <div className="d-flex justify-content-around">
               {popularProfiles.results.slice(0, 4).map((profile) => (

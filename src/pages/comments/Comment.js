@@ -47,7 +47,7 @@ const Comment = (props) => {
 
   return (
     <>
-      <hr />
+      <hr width="80%"/>
       <Media>
         <Link to={`/profiles/${profile_id}`}>
           <Avatar src={profile_image} />
