@@ -11,7 +11,7 @@ import { fetchMoreData } from "../../utils/utils";
 import Asset from "../../components/Asset";
 import { axiosReq } from "../../api/axiosDefaults";
 import InfiniteScroll from "react-infinite-scroll-component";
-import NoResults from "../../assets/no-results.png";
+import NoResults from "../../assets/page-not-found.webp";
 
 import { useLocation, useParams } from "react-router-dom/cjs/react-router-dom";
 import Guide from "../guides/Guide";

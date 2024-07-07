@@ -1,5 +1,5 @@
 import React from 'react'
-import NoResults from "../assets/no-results.png";
+import NoResults from "../assets/page-not-found.webp";
 import styles from "../styles/NotFound.module.css";
 import Asset from "./Asset";
 

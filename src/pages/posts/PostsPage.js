@@ -13,14 +13,14 @@ import styles from "../../styles/PostsPage.module.css";
 import { useLocation } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 
-import NoResults from "../../assets/no-results.png";
+import NoResults from "../../assets/page-not-found.webp";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import logo from "../../assets/architecture-and-city.png";
-import logo1 from "../../assets/social-media.png"
-import logo2 from "../../assets/social-media (1).png"
+import logo from "../../assets/architecture-and-city.webp";
+import logo1 from "../../assets/social-media.webp"
+import logo2 from "../../assets/social-media (1).webp"
 
 function PostsPage({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });

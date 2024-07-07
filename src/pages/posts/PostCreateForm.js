@@ -6,7 +6,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Alert from "react-bootstrap/Alert";
-import Upload from "../../assets/inbox.png";
+import Upload from "../../assets/inbox.webp";
 import Asset from "../../components/Asset";
 import Image from "react-bootstrap/Image";
 

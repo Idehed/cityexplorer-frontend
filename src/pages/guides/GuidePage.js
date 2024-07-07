@@ -12,10 +12,10 @@ import Asset from "../../components/Asset";
 import styles from "../../styles/PostsPage.module.css";
 import { axiosReq } from "../../api/axiosDefaults";
 import InfiniteScroll from "react-infinite-scroll-component";
-import NoResults from "../../assets/no-results.png";
+import NoResults from "../../assets/page-not-found.webp";
 import Guide from "./Guide";
 import { useLocation } from "react-router-dom/cjs/react-router-dom";
-import logo from "../../assets/tour-guide.png";
+import logo from "../../assets/tour-guide.webp";
 
 const GuidePage = ({ message, filter = "" }) => {
     const [guides, setGuides] = useState({ results: [] });

@@ -23,11 +23,11 @@ import Image from "react-bootstrap/Image";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Post from "../posts/Post";
 import { fetchMoreData } from "../../utils/utils";
-import NoResults from "../../assets/no-results.png";
+import NoResults from "../../assets/page-not-found.webp";
 import { ProfileEditDropdown } from "../../components/MoreDropdown";
 import Modal from "react-bootstrap/Modal";
 import Guide from "../guides/Guide";
-import logo from "../../assets/low.png";
+import logo from "../../assets/low.webp";
 
 const ProfilePage = () => {
   const [hasLoaded, setHasLoaded] = useState(false);

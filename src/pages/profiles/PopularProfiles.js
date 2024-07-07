@@ -4,7 +4,7 @@ import appStyles from "../../App.module.css";
 import Asset from "../../components/Asset";
 import Profile from "./Profile";
 import { useProfileData } from "../../contexts/ProfileDataContext";
-import logo from "../../assets/people.png";
+import logo from "../../assets/people.webp";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 const PopularProfiles = ({ mobile }) => {
