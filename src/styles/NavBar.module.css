@@ -1,22 +1,22 @@
 .NavBar {
-    background-color: #ffffff;
-    border: 1px solid  #dadadf;
+  background-color: #ffffff;
+  border: 1px solid  #dadadf;
 }
 
 .NavLink {
-    padding: 5px;
-    color: #232424;
-  }
+  padding: 5px;
+  color: #232424;
+}
   
   .Active i {
-    color:rgb(5, 70, 190);
-  }
+  color:rgb(5, 70, 190);
+}
 
 .LogoM {
-    margin-left: 7px;
-    margin-bottom: 15px;
+  margin-left: 7px;
+  margin-bottom: 15px;
 }
 
 .LogoT {
-    font-size: 25px;
+  font-size: 25px;
 }

@@ -1,11 +1,13 @@
 # CityXP ![CityEP](src/assets/family.webp)
 
-About text
+CityXP is a social media platform designed for people that like to discover new cities. Users can share their experiences, stories, and images about different cities, creating a community of city explorers. Whether you're posting about hidden gems, local cuisine, or cultural landmarks, CityXP is the perfect place to document and discover city life around the world.
+
+Additionally, CityXP offers a feature where users can become certified city guides. As a guide, you can showcase your knowledge and passion for your city, providing personalized tour that visitors can enjoy.
 
 # Live Page
 [CityXP]()
 
-![Website Mockup]()
+![Website Mockup](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/bb716a4c-d3c4-451e-b515-fc1b68a0cb00)
 
 # Django Rest Backend
 The repository for the backend of the application can be found here:<br>[CityXP API]()
@@ -15,6 +17,7 @@ The repository for the backend of the application can be found here:<br>[CityXP 
 * [CityXP](#cityxp)
 * [UX](#ux)
   * [User Goals](#user-goals)
+  * [Site owner Goals](#site-owner-goals)
   * [Agile and planning](#agile-and-planning)
   * [User stories](#user-stories)
   * [Wireframes](#wireframes)
@@ -56,11 +59,25 @@ The repository for the backend of the application can be found here:<br>[CityXP 
 ## UX
 
 ### User Goals
+- Be able to navigate the platform and access relevant information easily
+- Have a clean-looking website with some fun and interactive icons.
+- Have a visually appealing and responsive user interface.
+- Be able to interact with other users by following them, liking, commenting, and sharing posts.
+- Find the city you want to explore by seeing other users' posts.
+- Book a guide so that you can have the best experience in that city.
+
+
+### Site Owner Goals
+- Want users to frequently come back to the website to look for new cities to explore or new guides to book.
+- Create a clean but fun website where users can upload and share pictures of places in different cities.
+- Users enjoy the ability to like a post, comment on a post, review a guide, and upload new pictures. 
+- Users like the interact with other by following a user, liking, commenting and reviewing.
+
 
 
 ### Agile and planning
 <hr>
-The API and Frontend of this project was planned using Agile methodology and MoSCoW prioritization on github projects.
+The API and Frontend of this project were planned using Agile methodology and MoSCoW prioritization on GitHub projects.
 
 **The user stories project can be found [here](https://github.com/users/Idehed/projects/6)**
 

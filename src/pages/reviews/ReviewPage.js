@@ -64,7 +64,7 @@ const ReviewPage = () => {
                 {reviews.results.length ? (
                   <InfiniteScroll
                     children={reviews.results.map((guide) => (
-                      <Review key={guide.id} {...guide} isProfilePage={false} />
+                      <Review key={guide.id} {...guide} isProfilePage={false} setReviews={setReviews}/>
                     ))}
                     dataLength={reviews.results.length}
                     loader={<Asset spinner />}

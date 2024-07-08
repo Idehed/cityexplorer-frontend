@@ -17,7 +17,7 @@ import Guide from "./Guide";
 import { useLocation } from "react-router-dom/cjs/react-router-dom";
 import logo from "../../assets/tour-guide.webp";
 
-const GuidePage = ({ message, filter = "" }) => {
+const GuidePage = ({ filter = "" }) => {
     const [guides, setGuides] = useState({ results: [] });
     const [hasLoaded, setHasLoaded] = useState(false);
     const { pathname } = useLocation();
@@ -79,7 +79,7 @@ const GuidePage = ({ message, filter = "" }) => {
                   />
                 ) : (
                   <Container className={appStyles.Content}>
-                    <Asset src={NoResults} message={message} />
+                    <Asset src={NoResults} message="Sorry, the guide or city you're looking for doesn't exist" />
                   </Container>
                 )}
               </>

@@ -248,7 +248,7 @@ const ProfilePage = () => {
           <Button variant="secondary" onClick={handleClose}>
             Cancel
           </Button>
-          <Button className={btnStyles.Button} onClick={handleDeleteGuide}>
+          <Button className={btnStyles.Blue} onClick={handleDeleteGuide}>
             Confirm
           </Button>
         </Modal.Footer>

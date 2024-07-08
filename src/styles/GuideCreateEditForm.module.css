@@ -1,21 +1,21 @@
 .Container {
-    min-height: 343px;
-  }
+  min-height: 343px;
+}
 
 .titleform {
   border-radius: 15px
 }
 
 .Contentcreateguide {
-    background-color: #ffffff;
-    padding: 10px;
-    border-radius: 15px;
-    border: 1px solid #dadadf;
-    width: 70%;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid #dadadf;
+  width: 70%;
 }
 
 .hrguide {
-    border-top: 1px solid rgb(0 182 255 / 98%);
-    width: 60%;
-    margin-top: 5px;
-  }
+  border-top: 1px solid rgb(0 182 255 / 98%);
+  width: 60%;
+  margin-top: 5px;
+}

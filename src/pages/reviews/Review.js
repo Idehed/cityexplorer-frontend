@@ -16,9 +16,8 @@ const Review = (props) => {
     updated_at,
     content,
     rating,
-    setReviews,
-    setGuide,
     id,
+    setReviews,
   } = props;
 
   const currentUser = useCurrentUser();
@@ -27,15 +26,6 @@ const Review = (props) => {
   const handleDelete = async () => {
     try {
       await axiosRes.delete(`/reviews/${id}/`);
-      setGuide((prevGuide) => ({
-        results: [
-          {
-            ...prevGuide.results[0],
-            reviews_count: prevGuide.results[0].reviews_count - 1,
-          },
-        ],
-      }));
-    
       setReviews((prevReviews) => ({
         ...prevReviews,
         results: prevReviews.results.filter((review) => review.id !== id),
@@ -56,19 +46,11 @@ const Review = (props) => {
           <span className={styles.Owner}>{owner}</span>
           <span className={styles.Date}>{updated_at}</span>
           <p>
-            Rating:{' '}
-            <Rating readonly initialValue={rating} size={25}/>
+            Rating: <Rating readonly initialValue={rating} size={25} />
           </p>
-          <p>
-            Review:{' '}
-            {content}
-          </p>
+          <p>Review: {content}</p>
         </Media.Body>
-        {is_owner && (
-          <DropdownReview
-            handleDelete={handleDelete}
-          />
-        )}
+        {is_owner && <DropdownReview handleDelete={handleDelete} />}
       </Media>
     </>
   );
