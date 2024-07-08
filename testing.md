@@ -109,7 +109,8 @@ This section outlines the approach and results of testing the frontend features 
 | Review count is decreasesing when a review is deleted                                    | Request is successful, comment is deleted.                              | FAILED    |
 
 ## Failed test case
-I tried with the time I had left to fix that the review_count would decrease when a review was deleted but did not make it unfortunately.
+I tried with the time I had left to fix that the review_count would decrease when a review was deleted unless you refreshed the page but did not make it unfortunately.
+
 
 # Perfomance and Validations
 
@@ -121,7 +122,7 @@ Logged out Lighthouse report:<br>
 ![Lighthouse report logged out](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/48420c7f-a5dd-4b8b-ad8e-458df9ff1f07)
 
 
-The performace could have imporeved if I had used the django-resized in models.py for images. And for the best practices I saw that the cookies created my result to be low. Nothing I could have done.
+The performance could have improved if I had used the Django-resized in models.py for images. And for the best practices, I saw that the cookies created my result to be low. Nothing I could have done.
 
 ## W3C validator
 All CSS files were validated and no errors or warnings were found.<br>

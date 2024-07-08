@@ -4,13 +4,13 @@ CityXP is a social media platform designed for people that like to discover new 
 
 Additionally, CityXP offers a feature where users can become certified city guides. As a guide, you can showcase your knowledge and passion for your city, providing personalized tour that visitors can enjoy.
 
-# Live Page
-[CityXP]()
+## Live Page
+[CityXP](https://cityexplorer-frontend-82d55bcd49a8.herokuapp.com/)
 
 ![Website Mockup](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/bb716a4c-d3c4-451e-b515-fc1b68a0cb00)
 
 # Django Rest Backend
-The repository for the backend of the application can be found here:<br>[CityXP API]()
+The repository for the backend of the application can be found here:<br>[CityXP API](https://github.com/Idehed/CityExplorer_api)
 
 ## Table of Contents
 
@@ -78,8 +78,6 @@ The repository for the backend of the application can be found here:<br>[CityXP 
 ### Agile and planning
 <hr>
 The API and Frontend of this project were planned using Agile methodology and MoSCoW prioritization on GitHub projects.
-
-**The user stories project can be found [here](https://github.com/users/Idehed/projects/6)**
 
 
 This projects user stories were divided into 9 milestones<br>
@@ -270,8 +268,11 @@ Sign up page:<br>
 
 #### Colors
 
+- Background: The primary background color is a off-white (#f8f8f8). This neutral color creates a clean and airy feel for the website.
+- Navigation Bar: The navigation bar also uses and white color (#fffff), just to make it clean and separates from the background color.
+- Buttons: I chose the main colors for the buttons (#feaa00), (#242a3d), and (#712e1e). Mostly to match the icons that have similar colors to give some more colors to the website. 
 
-![]()
+![Colors](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/74101c01-5cab-429a-b804-4275a3d481a1)
 
 #### Typography
 I wanted a font that was clean and easy but still looked inviting.
@@ -737,6 +738,8 @@ Cloning a GitHub repository creates a local copy on your machine, allowing you t
 - My font is from [Google Fonts Poppins](https://fonts.google.com/specimen/Poppins?query=po)
 
 - The signup and signin images are from [Unsplash](https://unsplash.com/)
+  - Thanks to [Ana Bórquez](https://unsplash.com/@anabg1) for the signin image.
+  - Thanks to [Benobro](https://unsplash.com/@benobro) for the signup image.
 
 
 # Acknowledgements:
