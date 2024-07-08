@@ -221,6 +221,8 @@ This projects user stories were divided into 9 milestones<br>
 
 <br>
 
+The Contact user story was not implemented due to time unfortunately.
+
 ### Wireframes:
 
 <details>
@@ -312,6 +314,9 @@ Be able to comment back on a specific comment.
 <b>Like on a comment:</b><br>
 To be able to like a comment that you find interesting. Instead of having to comment on it to answer.
 
+<b>Contact page:</b><br>
+I did not have enought time to implement the contact page so that is one thing to improve the website.
+
 
 # Website layout
 
@@ -325,125 +330,189 @@ To be able to like a comment that you find interesting. Instead of having to com
 
 __Fully responsive navbar__<br>
 
-A fully responsive navbar is futured on top of the page and is always visible. On smaller screens the menu will hide in a hamburger menu bottom for a cleaner look.
+A fully responsive navbar is located on top of the page and is always visible on all pages. On smaller screens the menu will hide in a hamburger menudropdown button.
 
-  Logged out users:<br>
-  - Home page<br>
-  - Contact page<br>
-  - Sign up page<br>
-  - Sign in page<br>
+  Logged out users:
+ 
+    - Explore 
+    - Sign up   
+    - Sign in
 
-![Navbar logged out]()
+![Navbar logged out](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/ebade0e9-865c-46a9-9daf-bbdeee4791f2)
 
 Logged in users:<br>
-  - Add posts<br>
-  - Explore page<br>
-  - Following page<br>
-  - Guides page<br>
-  - Likes page<br>
-  - Contact page<br>
-  - Sign out page<br>
-  - Profile page<br>
+ 
+    - Explore 
+    - Following   
+    - Guides
+    - Liked
+    - Sign out 
+    - Profile
 
-![Navbar logged in]()
+![Navbar logged in](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/43386556-f281-46f5-bb2d-b1efaea016d1)
 
-__Logo hyperlinked to home page:__
+_Logo hyperlinked to home page:_
+
+I choose this Icon as the hyperlink because it's symbolising the title 
+"CityXP" thta is a short name for CityExplorer. The icons looks like people ready for travel.
+
+![Family icon](src/assets/family.webp)
 
 
-__Navbar on smaller screens:__
+_Navbar on smaller screens:_
 
+The navbar vill adapt depending on witch screen size you are on. 
+This one is the navbar for mobile screens.
+
+![navbar small](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/8a8bc120-6073-4efb-87f6-654eda47fb23)
+
+This navbar is for medium sized screens.
+![navbar medium](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/21c52591-30d3-4f6a-9829-74a79a7c03f9)
+
+This show how the hamburger menu work if pressed.
+![hamburger menu](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/d2185681-50f4-480e-890d-08b364b1a96e)
 
 
 ## Home page
 
-__The Home page consists of:__
+__Explore page__
 
-__The posts page__
+Here all the posts are displayed and is visible even if you are not logged in. The Explore page is diplaying post in a list, likes on a post, comments on a post, and also it show more profiles.
 
-
+![Posts list](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/ecd559e9-0ff1-44a7-b1d0-0004ac2dc7de)
 
 __More profiles__
 
+Here show some more profiles that you can follow or unfollow. On the mobile view the more profiles section showns only 4 profiles and the follow and unfollow button is not displayed. On the bigger screens the max total of profiles shown is 10.
 
-__The website title__
+![Desktop profiles](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/420758ec-2e2f-43b3-b04d-544125f47777)
+
+![Mobile profiles](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/b35799cb-0a18-4d66-9e5c-b62658d55018)
 
 __Searchbar__
 
+The searchbar for Explore, Following, and Liked pages has the placeholder text saying "Search posts by profilename or city". The Guide page has the placeholder text saying "Search guides by name or city"
 
-## Feed page
+![Explore,following,liked](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/cc181ecc-a29d-46f2-a21e-7fd4a4f788a7)
 
-__The feed page consists of:__
+![Guide](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/a3a9286c-295a-4c0b-a791-2edfef091b42)
 
-__Feed posts__
-
-
-## Contact Page
-
-__The Contact page consists of:__
-
-__Contact form__
+## Following page
 
 
-__Purpose of feature:__
+__Following posts__
 
+The following page shows all the posts form the profiles that you are foloowing. Easy way to scroll posts of the one's you like!
 
-## Sign in page
+![Followings page](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/f67527a5-8035-45a6-bf30-a68fb0f6da16)
 
-__The Sign in page consists of:__
+## Guides page
 
-__Sign in form__
+__Guides list__
 
+Here you will see a list of all the guides that you can call/Email to book. 
+You will see information on the guides (city, duration, cost, email, phone). There is also a rating of the guide so you know quite fast if it is a good guide or not. You can also click on a "leave a review" button that takes you to the create a review page. And also a "Guide review" that takes you to the reviws page.
 
-__Purpose of feature:__
+![Guides list](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/fd287197-63de-4c8f-ae3b-30fa0a7b2938)
 
+## Reviews page 
 
-## Sign up page
+__Reviews detail__
 
-__The Register page consists of:__
+Here all the reviews for the specific guide is shown.
 
-__Sign up form__
+![Reviews](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/85e52bba-ea67-4006-bb94-830da070b2b4)
 
+__Create a review__
 
-__Purpose of feature:__
->
+Here you can leave a review for the guide by first choosing the rating in start 1-5 and then a text of what you thought of them.
 
-## Profile page
+![Create review](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/94add566-7168-4ac9-b93b-5f0f6511f1f8)
 
-__The profile page consists of:__
+## Liked page 
 
-__Profile page and avatar__
+__Liked posts__
 
+Here all the posts that you liked are shown. This page is good for the user if they want to find all the posts that they liked.
 
-__Purpose of feature:__
-
+![Liked posts](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/e01b0f8c-551c-4b1a-98c2-21a201b25572)
 
 ## Create post
 
-__The Create post page consists of:__
-
 __Creat post field__
 
+The user can create a post by clicking on the icoon and  choosing an image, choose a title and a text about it.
+
+![Create post](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/73cf75e8-371c-46ce-95f3-2a67df400220)
+
+## Profile page
+
+__Profile page__
+
+![Profile](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/e6b5bc58-2165-432a-9b2d-74ba33639ab0)
+
+__Profile page with guide__
+
+![Profile guide](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/7073a0c7-d836-4c5f-b73b-7cd03dbb85f7)
+
+__Dropdown menu__
+
+![Dropdownmenu](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/6996f816-c331-46c1-bb3b-4fc067b08b23)
+
+__Dropdown menu as a guide__
+
+![Dropdownmenu guide](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/ba170329-0ff1-4d22-8881-3ab78d39abce)
+
+__Edit profile page__
+
+![Edit profile](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/72047d52-70d0-4081-b00f-bf57e0156719)
+
+__Change username__
+
+![Change username](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/3be232f2-c097-4a09-ae48-375fbb87478d)
+
+__Change password__
+
+![Change password](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/b36586fa-5c76-4392-a41e-b8ff67527f0b)
+
+__Register as a guide page__
+
+![Register guide](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/996d7986-56c1-4363-910a-33f4cf47b73a)
+
+## Sign in page
+
+__Sign in form__
+
+![Sign in](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/d4e05213-1aec-4cbf-837e-2741af2ed7c9)
+
+## Sign up page
+
+__Sign up form__
+
+![Sign up](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/e7728287-082f-498b-b5b7-00f95db7c2c5)
 
 ## Post page
 
-__The Post page consists of:__
+__The post detail__
 
-__The post__
-
-
-__Purpose of feature:__
+![Post detail](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/3d48ea28-c4d4-4c95-87e0-813a331f4881)
 
 
 __Comment section__
 
 The comment section allows users to post comments on a post aswell as delete and edit their comment using the menu displayed to the right in the comment field.<br>
 
-Comment section:<br>
-![Comment section](docs/images/Comments_field.png)<br>
-Comment edit menu:<br>
-![Comment menu](docs/images/comment_edit_menu.png)<br>
-Comment edit view:<br>
-![Comment edit](docs/images/comment_edit_view.png)<br>
+__Comments__
+
+![Comments](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/5f8d7f0e-47ca-4fe9-9dde-fa6e6b0d5922)
+
+__Comment edit menu__
+
+![Comment menu](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/3bb1aa1a-0bb2-4931-bfd1-80610e4651f6)
+
+__Comment edit view__
+
+![Comment edit](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/5994a2d8-6795-4081-ada5-19c306c0a2a0)
 
 <hr>
 
