@@ -113,12 +113,29 @@ I tried with the time I had left to fix that the review_count would decrease whe
 
 # Perfomance and Validations
 
-
+## Lighthouse
 Logged in Lighthouse report:<br>
 ![Lighthouse report logged in](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/84e6850f-c2eb-4a65-87b2-89eb51457439)
 
 Logged out Lighthouse report:<br>
 ![Lighthouse report logged out](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/48420c7f-a5dd-4b8b-ad8e-458df9ff1f07)
 
-All CSS files was validated and no errors or warnings was found.<br>
-![CSS Validation]()
+
+## W3C validator
+All CSS files were validated and no errors or warnings were found.<br>
+![CSS Validation](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/a2c58822-7028-4b1a-881c-a06472c68579)
+
+
+## JXS validator
+I used the ESLint website [ESLint](https://eslint.org/play/) and I got these errors 
+![ESLint error](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/51c9bfaa-eebc-422b-896f-280f23764b71)
+![ESLint error](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/7402648b-d676-4647-b96f-5afd01b799a1)
+![ESLint error](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/9973f11d-237d-445f-a15d-7f5dfb47dae8)
+
+- It was not an ideal way to validate due to the fact that it is bound to throw unused variable/undefined variable errors because of the nature of importing/exporting components and variables between the different files.
+- I ignored the above error types and checked for syntax errors, and found the code to be clean.
+
+# Responsiveness
+
+
+[Back to Readme](README.md#testing)
