@@ -653,6 +653,22 @@ Additionally, specific scripts were defined for building, testing, and starting 
 
 # Known Bugs
 
+I had many bugs throughout this project, mostly it was due to typos both in the backend and in the frontend. I had to reset my database two times because it did not work otherwise. I did have some more bugs that were not only typos.
+
+
+1. 
+![ClassName error](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/f5bd403c-fc8f-4b1c-a58a-0f71e2f7e5ed)
+This error happened after I added icons from Fontawesome. I forgot to change the class to className. I did change it and it worked!
+
+2. 
+![Profilepage-guide](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/293d235e-0432-471a-946d-0a24752446a1)
+This error happened every time I went into someone's profile page even if they were not a certified guide. I had to make sure that the guideid was set and use an if statement if the profile had a guideid. If else set the guide data to null. 
+
+3. 
+![error](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/89d802be-6429-4996-954b-dc00ea447240)
+This error was fixed after adding a important \w\ in the cors setting. I had set it to \ws\ apparently. 
+![cors error solved](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/0769db22-0236-4c26-9964-2d1a1e68082c)
+
 
 # Deployment
 
