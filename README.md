@@ -40,8 +40,6 @@ The repository for the backend of the application can be found here:<br>[CityXP 
   * [Component Reusability](#component-reusability)
   * [Packages and Tools](#packages-and-tools)
 * [Testing](#testing)
-  * [Manual Testing](#manual-testing)
-  * [Performance and Validation](#performance-and-validation)
 * [Known Bugs](#known-bugs)
 * [Deployment](#deployment)
   * [Heroku](#heroku)
@@ -366,7 +364,7 @@ This navbar is for medium sized screens.
 ![navbar medium](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/21c52591-30d3-4f6a-9829-74a79a7c03f9)
 <hr>
 
-This show how the hamburger menu work if pressed.
+This shows how the hamburger menu work if pressed.
 ![hamburger menu](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/d2185681-50f4-480e-890d-08b364b1a96e)
 
 
@@ -374,13 +372,13 @@ This show how the hamburger menu work if pressed.
 
 __Explore page__
 
-Here all the posts are displayed and is visible even if you are not logged in. The Explore page is diplaying post in a list, likes on a post, comments on a post, and also it show more profiles.
+Here all the posts are displayed and is visible even if you are not logged in. The Explore page is diplaying post in a list, likes on a post, comments on a post, and also it show "more profiles".
 
 ![Posts list](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/ecd559e9-0ff1-44a7-b1d0-0004ac2dc7de)
 
 __More profiles__
 
-Here show some more profiles that you can follow or unfollow. On the mobile view the more profiles section showns only 4 profiles and the follow and unfollow button is not displayed. On the bigger screens the max total of profiles shown is 10.
+In this section you can see more profiles that you can follow or unfollow. On the mobile view the more profiles section showns only 4 profiles and the follow and unfollow button is not displayed. On the bigger screens the max total of profiles shown is 10.
 
 ![Desktop profiles](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/420758ec-2e2f-43b3-b04d-544125f47777)
 
@@ -399,7 +397,7 @@ The searchbar for Explore, Following, and Liked pages has the placeholder text s
 
 __Following posts__
 
-The following page shows all the posts form the profiles that you are foloowing. Easy way to scroll posts of the one's you like!
+The following page shows all the posts form the profiles that you are following. Easy way to scroll posts of the one's you like!
 
 ![Followings page](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/f67527a5-8035-45a6-bf30-a68fb0f6da16)
 
@@ -408,7 +406,7 @@ The following page shows all the posts form the profiles that you are foloowing.
 __Guides list__
 
 Here you will see a list of all the guides that you can call/Email to book. 
-You will see information on the guides (city, duration, cost, email, phone). There is also a rating of the guide so you know quite fast if it is a good guide or not. You can also click on a "leave a review" button that takes you to the create a review page. And also a "Guide review" that takes you to the reviws page.
+You will see information on the guides (city, duration, cost, email, phone). There is also a rating of the guide so you know quite fast if it is a good guide or not. You can also click on a "leave a review" button that takes you to the Create a review page. And also a "Guide review" that takes you to the reviews page.
 
 ![Guides list](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/fd287197-63de-4c8f-ae3b-30fa0a7b2938)
 
@@ -422,7 +420,7 @@ Here all the reviews for the specific guide is shown.
 
 __Create a review__
 
-Here you can leave a review for the guide by first choosing the rating in start 1-5 and then a text of what you thought of them.
+Here you can leave a review for the guide by first choosing the rating 1-5 and then a text of what you thought of them.
 
 ![Create review](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/94add566-7168-4ac9-b93b-5f0f6511f1f8)
 
@@ -438,7 +436,7 @@ Here all the posts that you liked are shown. This page is good for the user if t
 
 __Creat post field__
 
-The user can create a post by clicking on the icoon and  choosing an image, choose a city and a text about it.
+The user can create a post by clicking on the icon and choosing an image, choose a city and a text about it.
 
 ![Create post](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/73cf75e8-371c-46ce-95f3-2a67df400220)
 
@@ -446,7 +444,7 @@ The user can create a post by clicking on the icoon and  choosing an image, choo
 
 __Profile page__
 
-On the profile page, you will see basic information like, how many posts, followers, and how many you are following. The user can edit their profile and add more text about.
+On the profile page, you will see basic information like, how many posts, followers, and how many you are following. The user can edit their profile by pressing the dropdown menu with 3 dots.
 
 ![Profile](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/e6b5bc58-2165-432a-9b2d-74ba33639ab0)
 
@@ -470,7 +468,7 @@ If you already are registered as a guide the " register as a guide" button is go
 
 __Edit profile page__
 
-This is the edit page where the user can choose to change image, chnage text or add more social links.
+This is the edit page where the user can choose to change their image, change text, or add more social links.
 
 ![Edit profile](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/72047d52-70d0-4081-b00f-bf57e0156719)
 
@@ -514,7 +512,7 @@ If you already have a account an sign in link is provided "Sign in".
 __Post detail__
 
 When the user clicks on a specific post they will be sent here, Post page.
-The logged in users can comment andif you are not the owner you can also like the post. The owner of the post can press the menu dropdown icon to either delete or edit the post.
+The logged in users can comment and if you are not the owner you can also like the post. The owner of the post can press the menu dropdown icon to either delete or edit the post.
 
 ![Post detail](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/8ca1fc2c-2c24-47f7-8741-8d22d634897b)
 
@@ -522,6 +520,7 @@ __Post detail edit page__
 
 Here the user can change image, change title, content.
 Pressing save will redirect the user back to the post view.
+
 ![edit post](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/698cc6db-4708-48e6-b0d9-c0d567e35826)
 
 ## Comment section
@@ -733,16 +732,11 @@ Additionally, specific scripts were defined for building, testing, and starting 
 
 # Testing
 
-## Manual testing
+## Manual testing, Performance and Validation
 
+Here you can see all the manual testing, performance and validation<br>
+[Manual testing, Perfomance and Validation](testing.md)
 
-[Manual testing](testing.md)
-
-
-## Performance and Validation
-
-
-[Perfomance and Validation](testing.md#performance-and-validation)
 
 # Known Bugs
 
@@ -755,6 +749,7 @@ This error happened after I added icons from Fontawesome. I forgot to change the
 
 2. 
 ![Profilepage-guide](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/293d235e-0432-471a-946d-0a24752446a1)
+
 This error happened every time I went into someone's profile page even if they were not a certified guide. I had to make sure that the guideid was set and use an if statement if the profile had a guideid. If else set the guide data to null. 
 
 3. 
@@ -825,7 +820,7 @@ Cloning a GitHub repository creates a local copy on your machine, allowing you t
 - Many of my icons has been collected from this website 
 [Flaticon](https://www.flaticon.com/)
 
-- Some others here [Flaticon](https://fontawesome.com/)
+- Some others here [Fontawesome](https://fontawesome.com/)
 
 - My font is from [Google Fonts Poppins](https://fonts.google.com/specimen/Poppins?query=po)
 
