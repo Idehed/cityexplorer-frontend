@@ -357,11 +357,14 @@ _Navbar on smaller screens:_
 
 The navbar vill adapt depending on witch screen size you are on. 
 This one is the navbar for mobile screens.
+ <hr>
 
 ![navbar small](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/8a8bc120-6073-4efb-87f6-654eda47fb23)
+<hr>
 
 This navbar is for medium sized screens.
 ![navbar medium](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/21c52591-30d3-4f6a-9829-74a79a7c03f9)
+<hr>
 
 This show how the hamburger menu work if pressed.
 ![hamburger menu](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/d2185681-50f4-480e-890d-08b364b1a96e)
