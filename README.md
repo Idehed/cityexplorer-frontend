@@ -320,12 +320,6 @@ I did not have enought time to implement the contact page so that is one thing t
 
 # Website layout
 
-<details>
-<summary>
-<b>Website layout</b>
-</summary>
-<summary>
-
 ## Navbar
 
 __Fully responsive navbar__<br>
@@ -441,7 +435,7 @@ Here all the posts that you liked are shown. This page is good for the user if t
 
 __Creat post field__
 
-The user can create a post by clicking on the icoon and  choosing an image, choose a title and a text about it.
+The user can create a post by clicking on the icoon and  choosing an image, choose a city and a text about it.
 
 ![Create post](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/73cf75e8-371c-46ce-95f3-2a67df400220)
 
@@ -449,39 +443,57 @@ The user can create a post by clicking on the icoon and  choosing an image, choo
 
 __Profile page__
 
+On the profile page, you will see basic information like, how many posts, followers, and how many you are following. The user can edit their profile and add more text about.
+
 ![Profile](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/e6b5bc58-2165-432a-9b2d-74ba33639ab0)
 
 __Profile page with guide__
+
+If you have created your profile as a guide it will appear like this on your profile. You have the "Remove as guide" if you want to delete you as a guide.
 
 ![Profile guide](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/7073a0c7-d836-4c5f-b73b-7cd03dbb85f7)
 
 __Dropdown menu__
 
+This is the dropdown menu in profile page that lets you edit profile, change username, change password or register as a guide.
+
 ![Dropdownmenu](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/6996f816-c331-46c1-bb3b-4fc067b08b23)
 
 __Dropdown menu as a guide__
+
+If you already are registered as a guide the " register as a guide" button is gone.
 
 ![Dropdownmenu guide](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/ba170329-0ff1-4d22-8881-3ab78d39abce)
 
 __Edit profile page__
 
+This is the edit page where the user can choose to change image, chnage text or add more social links.
+
 ![Edit profile](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/72047d52-70d0-4081-b00f-bf57e0156719)
 
 __Change username__
+
+The user can change their username and when they click save it is saved.
 
 ![Change username](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/3be232f2-c097-4a09-ae48-375fbb87478d)
 
 __Change password__
 
+The user can change their password, they need to match their password two times in order to change. Othervise you will get an error.
+
 ![Change password](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/b36586fa-5c76-4392-a41e-b8ff67527f0b)
 
 __Register as a guide page__
 
+In the register as a guide page the user can fill in the form in order to become a guide. After the create button is pressed the user gets redirected back to profile page.
 ![Register guide](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/996d7986-56c1-4363-910a-33f4cf47b73a)
 
 ## Sign in page
 
 __Sign in form__
+
+The sign in form allows the user to enter their username and password to enter the site. If the user enter the fields incorrectly they will get an clear error message displayed.
+If you are not singed up yet a link is provided "Sign up now".
 
 ![Sign in](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/d4e05213-1aec-4cbf-837e-2741af2ed7c9)
 
@@ -489,16 +501,27 @@ __Sign in form__
 
 __Sign up form__
 
+The sign up form allows the user to sign up to the site. If the passwords does not match, they will get a clear error message. 
+If you already have a account an sign in link is provided "Sign in".
+
 ![Sign up](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/e7728287-082f-498b-b5b7-00f95db7c2c5)
 
 ## Post page
 
-__The post detail__
+__Post detail__
 
-![Post detail](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/3d48ea28-c4d4-4c95-87e0-813a331f4881)
+When the user clicks on a specific post they will be sent here, Post page.
+The logged in users can comment andif you are not the owner you can also like the post. The owner of the post can press the menu dropdown icon to either delete or edit the post.
 
+![Post detail](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/8ca1fc2c-2c24-47f7-8741-8d22d634897b)
 
-__Comment section__
+__Post detail edit page__
+
+Here the user can change image, change title, content.
+Pressing save will redirect the user back to the post view.
+![edit post](https://github.com/Idehed/cityexplorer-frontend/assets/146822758/698cc6db-4708-48e6-b0d9-c0d567e35826)
+
+## Comment section
 
 The comment section allows users to post comments on a post aswell as delete and edit their comment using the menu displayed to the right in the comment field.<br>
 
@@ -518,12 +541,9 @@ __Comment edit view__
 
 __Additional functions non visible to users:__
 
-__Infinite scroll__
-
-
-</summary>
-</details><br>
-
+_Infinite scroll_<br/>
+The infinite scroll is a feature that will fetch more posts from the API 
+if the user keeps scrolling down on the page. It is used instead of having multiple pages that you press "next" to see. This feature is applied to the posts page, post detail page, following page, guides page, Liked page, Profile page, and Review page.
 
 # Reusability
 
